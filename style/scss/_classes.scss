@@ -1,0 +1,48 @@
+.fa-solid {
+    color: #7E7E7E;
+}
+
+.fa-store {
+    color: #9356DC;
+}
+
+.functioning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin: 30px 20px 30px -50px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        
+        li {
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 20px;
+            padding: 20px 70px 20px 0px;
+            background-color: #F6F6F6;
+            border-radius: 15px;
+            box-shadow: #dfdfdf 0px 5px 15px 0px;
+            font-size: 13px;
+
+            span {
+                margin-right: 10px;
+                background-color: #9356DC;
+                color: white;
+                font-size: 10px;
+                border-radius: 30px;
+                padding: 3px 7px 3px 7px;
+                margin-left: -8px;
+            }
+
+            i {
+                margin-right: 10px;
+                align-items: center;
+            }
+        }
+    }
+}
