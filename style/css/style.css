@@ -62,7 +62,7 @@ form input {
   width: 120px;
   padding-left: 10px;
   color: #353535;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 main > header {
@@ -72,10 +72,10 @@ main > header {
   height: 260px;
 }
 main > header h2 {
-  margin: 30px 20px 0px 20px;
+  margin: 30px 20px 20px 20px;
 }
 main > header p {
-  margin-bottom: 40px;
+  margin: 0px 20px 40px 20px;
   font-weight: 100;
   color: #353535;
 }
@@ -93,6 +93,43 @@ main > header a:hover {
   box-shadow: #b3b3b3 0px 0px 5px 3px;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+}
+article h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+}
+article figure img {
+  width: 100%;
+  height: 100px;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 20px;
+}
+footer h3 {
+  margin: 0px 0px 15px 0px;
+  font-family: Shrikhand, cursive;
+  font-weight: 100;
+  font-size: 14px;
+}
+footer li {
+  margin-bottom: 5px;
+}
+footer li a {
+  color: white;
+  font-size: 14px;
+}
+footer li a i {
+  margin-right: 10px;
+}
+
 .fa-solid {
   color: #7E7E7E;
 }
@@ -105,6 +142,7 @@ main > header a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px 0px 40px 0px;
 }
 .functioning h2 {
   margin: 30px 20px 30px -50px;
@@ -135,6 +173,21 @@ main > header a:hover {
 .functioning ul li i {
   margin-right: 10px;
   align-items: center;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa-handshake-angle {
+  margin-right: 5px;
+}
+
+.fa-handshake-angle,
+.fa-utensils {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
