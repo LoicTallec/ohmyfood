@@ -105,16 +105,30 @@ main > header {
 article {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     background-color: #F6F6F6;
+    padding: 30px 15px 30px 15px;
     
     h2 {
         font-family: Roboto, sans-serif;
         font-size: 20px;
-        
+
     }
 
-    
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        figure  {
+            
+            
+            img {
+                width: 450px;
+                height: 160px;
+            }
+        }
+
+    }
 }
 
 footer {
@@ -128,12 +142,14 @@ footer {
         font-weight: 100;
         font-size: 14px;
     }
+
     li {
         margin-bottom: 5px;
 
         a {
             color: white;
             font-size: 14px;
+
             i {
                 margin-right: 10px;
             }
