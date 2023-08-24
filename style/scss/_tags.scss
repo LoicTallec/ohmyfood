@@ -43,14 +43,14 @@ body > header {
         text-align: center;
         margin: 0px;
         padding-top: 15px;
-        font-family: Shrikhand, cursive;
+        font-family: $main-font;
         font-size: 25px;
     }
 }
 
 form {
-    display: flex;
-    justify-content: center;
+    display: $display;
+    justify-content: $justify-content;
     margin: 0px;
     padding: 15px;
     background-color: #EAEAEA;
@@ -82,8 +82,7 @@ main > header {
     p {
         margin: 0px 20px 40px 20px;
         font-weight: 100;
-        color: #353535;
-        
+        color: $footer-color;
     }
 
     a {
@@ -95,7 +94,8 @@ main > header {
         width: 250px;  
         box-shadow: #888888 0px 5px 10px 0px;
         
-        &:hover {
+        &:hover,
+        &:focus {
             background: linear-gradient(-10deg, #a073d8, #fd9ee2);
             box-shadow: #b3b3b3 0px 0px 5px 3px;
         }
@@ -118,16 +118,12 @@ article {
     ul {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        figure  {
+        flex-wrap: wrap; 
             
-            
-            img {
-                width: 450px;
-                height: 160px;
-            }
+        img {
+            width: 450px;
+            height: 160px;
         }
-
     }
 }
 

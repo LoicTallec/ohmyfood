@@ -1,3 +1,4 @@
+/************** Color ****************/
 body {
   margin: 0;
 }
@@ -42,7 +43,7 @@ body > header h1 {
   text-align: center;
   margin: 0px;
   padding-top: 15px;
-  font-family: Shrikhand, cursive;
+  font-family: "Shrikhand", cursive;
   font-size: 25px;
 }
 
@@ -88,7 +89,7 @@ main > header a {
   width: 250px;
   box-shadow: #888888 0px 5px 10px 0px;
 }
-main > header a:hover {
+main > header a:hover, main > header a:focus {
   background: linear-gradient(-10deg, #a073d8, #fd9ee2);
   box-shadow: #b3b3b3 0px 0px 5px 3px;
 }
@@ -108,7 +109,7 @@ article ul {
   justify-content: center;
   flex-wrap: wrap;
 }
-article ul figure img {
+article ul img {
   width: 450px;
   height: 160px;
 }
