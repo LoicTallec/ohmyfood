@@ -1,6 +1,26 @@
-
-@mixin disposition($display: flex, $justify-content: center, $align-items: center) {
-    display: $display;
-    justify-content: $justify-content;
-    align-items: $align-items;
+@mixin disalicent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+@mixin discolcent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin btn-design {
+    background: linear-gradient(-10deg, #9356DC, #FF79DA);
+    border-radius: 30px;
+    font-size: 14px;
+    padding: 15px 25px 15px 25px;
+    color: white;
+    width: 250px;  
+    box-shadow: $shadows-box 0px 5px 10px 0px;
+    
+    &:hover,
+    &:focus {
+        background: linear-gradient(-10deg, #a073d8, #fd9ee2);
+        box-shadow: $shadows-box 0px 0px 5px 3px;
+    }}

@@ -22,21 +22,21 @@ img {
 a {
   text-decoration: none;
   color: #000;
-  font-family: Roboto, sans-serif;
 }
 
 p,
 h2,
 h3,
 li,
+a,
 span {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body > header {
   width: 100%;
   height: 60px;
-  box-shadow: #c5c5c5 0px 2px 3px 0px;
+  box-shadow: #cccccc 0px 2px 3px 0px;
   position: relative;
 }
 body > header h1 {
@@ -50,6 +50,7 @@ body > header h1 {
 form {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0px;
   padding: 15px;
   background-color: #EAEAEA;
@@ -87,11 +88,11 @@ main > header a {
   padding: 15px 25px 15px 25px;
   color: white;
   width: 250px;
-  box-shadow: #888888 0px 5px 10px 0px;
+  box-shadow: #cccccc 0px 5px 10px 0px;
 }
 main > header a:hover, main > header a:focus {
   background: linear-gradient(-10deg, #a073d8, #fd9ee2);
-  box-shadow: #b3b3b3 0px 0px 5px 3px;
+  box-shadow: #cccccc 0px 0px 5px 3px;
 }
 
 article {
@@ -101,13 +102,12 @@ article {
   padding: 30px 15px 30px 15px;
 }
 article h2 {
-  font-family: Roboto, sans-serif;
   font-size: 20px;
 }
 article ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
 article ul img {
   width: 450px;

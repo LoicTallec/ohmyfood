@@ -10,7 +10,16 @@ $main-text-color: black;
 $footer-text-color: white;
 $main-font: 'Shrikhand', cursive;
 $secondary-font: 'Roboto', sans-serif;
+$shadows-box: #cccccc;
+$secondary-shadow-box: #dfdfdf;
 
-$display: flex;
-$justify-content: center;
-$align-items: center;
+
+$headercenter: (
+    width: 100%,
+    height: 60px,
+    box-shadow: $shadows-box 0px 2px 3px 0px,
+    position: relative,
+);
+
+
+
