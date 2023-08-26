@@ -81,23 +81,10 @@ main > header {
         margin: 0px 20px 40px 20px;
         font-weight: 100;
         color: $footer-color;
-
     }
 
     a {
-        background: linear-gradient(-10deg, #9356DC, #FF79DA);
-        border-radius: 30px;
-        font-size: 14px;
-        padding: 15px 25px 15px 25px;
-        color: white;
-        width: 250px;  
-        box-shadow: $shadows-box 0px 5px 10px 0px;
-        
-        &:hover,
-        &:focus {
-            background: linear-gradient(-10deg, #a073d8, #fd9ee2);
-            box-shadow: $shadows-box 0px 0px 5px 3px;
-        }
+        @include btn-design;
     }
 }
 
