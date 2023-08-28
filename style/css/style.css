@@ -1,3 +1,5 @@
+/****************** Display mixins ******************/
+/********************* bouton ***********************/
 /************** Color ****************/
 body {
   margin: 0;
@@ -21,7 +23,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: black;
 }
 
 p,
@@ -91,13 +93,12 @@ main > header a {
   box-shadow: #cccccc 0px 5px 10px 0px;
 }
 main > header a:hover, main > header a:focus {
-  background: linear-gradient(-10deg, #a073d8, #fd9ee2);
+  transition: 1s;
+  background: linear-gradient(-10deg, #9356DC, #FF79DA);
   box-shadow: #cccccc 0px 0px 5px 3px;
 }
 
 article {
-  display: flex;
-  flex-direction: column;
   background-color: #F6F6F6;
   padding: 30px 15px 30px 15px;
 }
@@ -106,12 +107,34 @@ article h2 {
 }
 article ul {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-article ul img {
+
+figure {
+  background-color: white;
+  border-radius: 30px 30px 0px 0px;
+}
+figure img {
   width: 450px;
   height: 160px;
+  border-radius: 30px 30px 0px 0px;
+}
+figure p {
+  position: absolute;
+}
+figure figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60px;
+  min-width: 280px;
+  padding: 5px 10px 10px 10px;
+}
+figure figcaption p,
+figure figcaption h3 {
+  width: 90%;
+  margin: 0px;
+  position: relative;
 }
 
 footer {
@@ -121,7 +144,7 @@ footer {
 }
 footer h3 {
   margin: 0px 0px 15px 0px;
-  font-family: Shrikhand, cursive;
+  font-family: "Shrikhand", cursive;
   font-weight: 100;
   font-size: 14px;
 }
@@ -183,7 +206,7 @@ footer li a i {
 
 .restaurants {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -193,7 +216,7 @@ footer li a i {
 
 .fa-handshake-angle,
 .fa-utensils {
-  color: #ffffff;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

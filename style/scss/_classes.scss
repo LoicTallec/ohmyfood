@@ -7,7 +7,8 @@
 }
 
 .functioning {
-    @include discolcent;
+    @include display-secondary;
+
     margin: 10px 0px 40px 0px;
     
     h2 {
@@ -23,7 +24,7 @@
             max-width: 200px;
             margin-bottom: 20px;
             padding: 20px 70px 20px 0px;
-            background-color: #F6F6F6;
+            background-color: $background-main-color;
             border-radius: 15px;
             box-shadow: $secondary-shadow-box 0px 5px 15px 0px;
             font-size: 13px;
@@ -47,7 +48,7 @@
 }
 
 .restaurants {
-    @include discolcent;
+    @include display-main;
 }
 
 .fa-handshake-angle {
@@ -56,7 +57,7 @@
 
 .fa-handshake-angle,
 .fa-utensils {
-    color: #ffffff;
+    color: $footer-text-color;
 }
 
 
