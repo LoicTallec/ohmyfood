@@ -1,9 +1,9 @@
 .fa-solid {
-    color: #7E7E7E;
+    color: $fa-solid-main-color;
 }
 
 .fa-store {
-    color: #9356DC;
+    color: $main-color;
 }
 
 .functioning {
@@ -47,9 +47,7 @@
     }
 }
 
-.restaurants {
-    @include display-main;
-}
+
 
 .fa-handshake-angle {
     margin-right: 5px;
@@ -58,6 +56,15 @@
 .fa-handshake-angle,
 .fa-utensils {
     color: $footer-text-color;
+}
+
+.fa-circle-check {
+    display: none;
+    color: $footer-color;
+
+    &:active {
+        display: block;
+    }
 }
 
 

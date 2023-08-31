@@ -1,6 +1,69 @@
+/************** Color ****************/
 /****************** Display mixins ******************/
 /********************* bouton ***********************/
-/************** Color ****************/
+.fa-solid {
+  color: #7E7E7E;
+}
+
+.fa-store {
+  color: #9356DC;
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px 40px 0px;
+}
+.functioning h2 {
+  margin: 30px 20px 30px -50px;
+}
+.functioning ul {
+  display: flex;
+  flex-direction: column;
+}
+.functioning ul li {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 20px;
+  padding: 20px 70px 20px 0px;
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  box-shadow: #dfdfdf 0px 5px 15px 0px;
+  font-size: 13px;
+}
+.functioning ul li span {
+  margin-right: 10px;
+  background-color: #9356DC;
+  color: white;
+  font-size: 10px;
+  border-radius: 30px;
+  padding: 3px 7px 3px 7px;
+  margin-left: -8px;
+}
+.functioning ul li i {
+  margin-right: 10px;
+  align-items: center;
+}
+
+.fa-handshake-angle {
+  margin-right: 5px;
+}
+
+.fa-handshake-angle,
+.fa-utensils {
+  color: white;
+}
+
+.fa-circle-check {
+  display: none;
+  color: #353535;
+}
+.fa-circle-check:active {
+  display: block;
+}
+
+/*********************** Page 1 ***********************/
 body {
   margin: 0;
 }
@@ -57,9 +120,6 @@ form {
   padding: 15px;
   background-color: #EAEAEA;
 }
-form i {
-  color: #353535;
-}
 form input {
   border: none;
   background-color: #EAEAEA;
@@ -67,6 +127,10 @@ form input {
   padding-left: 10px;
   color: #353535;
   font-weight: 600;
+}
+
+main article {
+  background-color: #F6F6F6;
 }
 
 main > header {
@@ -93,48 +157,55 @@ main > header a {
   box-shadow: #cccccc 0px 5px 10px 0px;
 }
 main > header a:hover, main > header a:focus {
-  transition: 1s;
-  background: linear-gradient(-10deg, #9356DC, #FF79DA);
+  background: linear-gradient(-10deg, #a674e2, #ff9de4);
+  transition: all 0.5s;
   box-shadow: #cccccc 0px 0px 5px 3px;
 }
 
-article {
-  background-color: #F6F6F6;
+[id*=restaurants] {
   padding: 30px 15px 30px 15px;
+  background-color: #F6F6F6;
 }
-article h2 {
+[id*=restaurants] h2 {
   font-size: 20px;
 }
-article ul {
+[id*=restaurants] ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 figure {
+  position: relative;
   background-color: white;
-  border-radius: 30px 30px 0px 0px;
+  border-radius: 20px;
 }
 figure img {
   width: 450px;
-  height: 160px;
-  border-radius: 30px 30px 0px 0px;
+  height: 140px;
+  border-radius: 20px 20px 0 0;
 }
-figure p {
+figure > p {
   position: absolute;
+  right: 20px;
+  background: #99E2D0;
+  padding: 5px 10px;
+  border-radius: 2px;
+  color: #008766;
 }
 figure figcaption {
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
   height: 60px;
-  min-width: 280px;
-  padding: 5px 10px 10px 10px;
+  margin: 10px 20px 20px 20px;
 }
 figure figcaption p,
 figure figcaption h3 {
-  width: 90%;
-  margin: 0px;
-  position: relative;
+  margin: 0px 0px 5px;
+}
+figure figcaption i {
+  position: absolute;
+  right: 10px;
+  top: 35%;
 }
 
 footer {
@@ -159,64 +230,75 @@ footer li a i {
   margin-right: 10px;
 }
 
-.fa-solid {
-  color: #7E7E7E;
+/************************ PAGE 2 **************************/
+nav {
+  height: 60px;
 }
-
-.fa-store {
-  color: #9356DC;
-}
-
-.functioning {
+nav a {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 10px 0px 40px 0px;
-}
-.functioning h2 {
-  margin: 30px 20px 30px -50px;
-}
-.functioning ul {
-  display: flex;
-  flex-direction: column;
-}
-.functioning ul li {
   width: 100%;
-  max-width: 200px;
-  margin-bottom: 20px;
-  padding: 20px 70px 20px 0px;
-  background-color: #F6F6F6;
-  border-radius: 15px;
-  box-shadow: #dfdfdf 0px 5px 15px 0px;
-  font-size: 13px;
+  height: 100%;
 }
-.functioning ul li span {
-  margin-right: 10px;
-  background-color: #9356DC;
-  color: white;
-  font-size: 10px;
-  border-radius: 30px;
-  padding: 3px 7px 3px 7px;
-  margin-left: -8px;
+nav img {
+  width: 250px;
 }
-.functioning ul li i {
-  margin-right: 10px;
-  align-items: center;
+nav .fa-solid {
+  color: black;
 }
 
-.restaurants {
+header img {
+  width: 100%;
+  max-height: 300px;
+}
+
+article {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+article section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+article section ul {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
 }
-
-.fa-handshake-angle {
-  margin-right: 5px;
+article section li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: #dfdfdf 0px 5px 15px 0px;
+  width: 90%;
+  max-width: 400px;
+  margin-top: 3px;
 }
-
-.fa-handshake-angle,
-.fa-utensils {
-  color: white;
+article section li:active i {
+  display: flex;
+}
+article section li h3 {
+  font-size: 14px;
+  margin: 0px 0px 7px 0px;
+}
+article section li p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 0;
+}
+article section h2 {
+  font-size: 20px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
