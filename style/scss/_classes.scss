@@ -67,4 +67,13 @@
     }
 }
 
+/********************* PAGE 2 ************************/
+
+.centermenu {
+    display: flex;
+    flex-direction: column;
+
+    border: 20px solid $tertiary-color;
+    background-color: $background-main-color;
+}
 
