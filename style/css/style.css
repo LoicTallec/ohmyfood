@@ -5,15 +5,11 @@
   color: #7E7E7E;
 }
 
-.fa-store {
-  color: #9356DC;
-}
-
 .functioning {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px 0px 40px 0px;
+  margin: 10px 0px 80px 0px;
 }
 .functioning h2 {
   margin: 30px 20px 30px -50px;
@@ -21,8 +17,9 @@
 .functioning ul {
   display: flex;
   flex-direction: column;
+  max-width: 450px;
 }
-.functioning ul li {
+.functioning li {
   width: 100%;
   max-width: 200px;
   margin-bottom: 20px;
@@ -32,7 +29,7 @@
   box-shadow: #dfdfdf 0px 5px 15px 0px;
   font-size: 13px;
 }
-.functioning ul li span {
+.functioning span {
   margin-right: 10px;
   background-color: #9356DC;
   color: white;
@@ -41,9 +38,41 @@
   padding: 3px 7px 3px 7px;
   margin-left: -8px;
 }
-.functioning ul li i {
+.functioning i {
   margin-right: 10px;
   align-items: center;
+}
+.functioning li:hover i,
+.functioning li:focus i {
+  color: #9356DC;
+}
+
+.menu-list {
+  position: relative;
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0 0;
+  margin: auto;
+  margin-top: -40px;
+  max-width: 1500px;
+  padding-bottom: 40px;
+}
+.menu-list button {
+  background: linear-gradient(-10deg, #9356DC, #FF79DA);
+  border-radius: 30px;
+  font-size: 14px;
+  padding: 15px 25px 15px 25px;
+  color: white;
+  width: 250px;
+  box-shadow: #cccccc 0px 5px 10px 0px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 1% auto;
+}
+.menu-list button:hover, .menu-list button:focus {
+  background: linear-gradient(-10deg, #a674e2, #ff9de4);
+  transition: all 0.5s;
+  box-shadow: #cccccc 0px 0px 5px 3px;
 }
 
 .fa-handshake-angle {
@@ -64,14 +93,6 @@
 }
 
 /********************* PAGE 2 ************************/
-.centermenu {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  border: 20px solid #99E2D0;
-  background-color: white;
-}
-
 /*********************** Page 1 ***********************/
 body {
   margin: 0;
@@ -171,14 +192,14 @@ main > header a:hover, main > header a:focus {
 [id*=restaurants] {
   padding: 30px 15px 30px 15px;
   background-color: #F6F6F6;
+  border-radius: 0%;
 }
 [id*=restaurants] h2 {
   font-size: 20px;
 }
 [id*=restaurants] ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 450px;
+  margin: auto;
 }
 
 figure {
@@ -249,35 +270,43 @@ nav a {
 }
 nav a .fa-solid {
   color: black;
+  padding-left: 30px;
 }
 nav a img {
   width: 200px;
-  display: flex;
-  align-items: center;
+  margin: auto;
+  padding-right: 30px;
+}
+
+main img {
+  width: 100%;
+  max-height: 300px;
 }
 
 article header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-}
-article header img {
-  width: 100%;
-  max-height: 300px;
+  max-width: 450px;
+  margin: auto;
 }
 article header h1 {
   font-family: "Shrikhand", cursive;
 }
+
 article section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-article section ul {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: auto;
+}
+article section ul {
+  margin: auto;
+  min-width: 350px;
+  max-width: 700px;
   width: 100%;
 }
 article section li {
@@ -290,8 +319,6 @@ article section li {
   height: 40px;
   border-radius: 10px;
   box-shadow: #dfdfdf 0px 5px 15px 0px;
-  width: 90%;
-  max-width: 400px;
   margin-top: 3px;
 }
 article section li:active i {

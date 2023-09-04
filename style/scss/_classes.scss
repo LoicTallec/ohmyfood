@@ -2,14 +2,11 @@
     color: $fa-solid-main-color;
 }
 
-.fa-store {
-    color: $main-color;
-}
+
 
 .functioning {
     @include display-secondary;
-
-    margin: 10px 0px 40px 0px;
+    margin: 10px 0px 80px 0px;
     
     h2 {
         margin: 30px 20px 30px -50px;
@@ -18,35 +15,58 @@
     ul {
         display: flex;
         flex-direction: column;
-        
-        li {
-            width: 100%;
-            max-width: 200px;
-            margin-bottom: 20px;
-            padding: 20px 70px 20px 0px;
-            background-color: $background-main-color;
-            border-radius: 15px;
-            box-shadow: $secondary-shadow-box 0px 5px 15px 0px;
-            font-size: 13px;
+        max-width: 450px;
+    } 
 
-            span {
-                margin-right: 10px;
-                background-color: $main-color;
-                color: $footer-text-color;
-                font-size: 10px;
-                border-radius: 30px;
-                padding: 3px 7px 3px 7px;
-                margin-left: -8px;
-            }
+    li {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 20px;
+        padding: 20px 70px 20px 0px;
+        background-color: $background-main-color;
+        border-radius: 15px;
+        box-shadow: $secondary-shadow-box 0px 5px 15px 0px;
+        font-size: 13px;
+    }
 
-            i {
-                margin-right: 10px;
-                align-items: center;
-            }
-        }
+    span {
+        margin-right: 10px;
+        background-color: $main-color;
+        color: $footer-text-color;
+        font-size: 10px;
+        border-radius: 30px;
+        padding: 3px 7px 3px 7px;
+        margin-left: -8px;
+    }
+
+    i {
+        margin-right: 10px;
+        align-items: center;
+    }
+
+    li:hover i,
+    li:focus i {
+        color: $main-color;
     }
 }
 
+.menu-list {
+    position: relative;
+    background-color: $background-main-color;
+    border-radius: 50px 50px 0 0;
+    margin: auto;
+    margin-top: -40px;
+    max-width: 1500px;
+    padding-bottom: 40px;
+    
+    button {
+        @include btn-design;
+        border: none;
+        display: flex;
+        justify-content: center;
+        margin: 40px auto 1% auto;
+    }
+}
 
 
 .fa-handshake-angle {
@@ -69,13 +89,4 @@
 
 /********************* PAGE 2 ************************/
 
-.centermenu {
-    display: flex;
-    flex-direction: column;
-    
-    width: calc(100% - 20% / 2);
-    
-    border: 20px solid $tertiary-color;
-    background-color: white;
-}
 
