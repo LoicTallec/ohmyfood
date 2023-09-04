@@ -67,8 +67,9 @@
 .centermenu {
   display: flex;
   flex-direction: column;
+  width: 90%;
   border: 20px solid #99E2D0;
-  background-color: #F6F6F6;
+  background-color: white;
 }
 
 /*********************** Page 1 ***********************/
@@ -136,10 +137,6 @@ form input {
   padding-left: 10px;
   color: #353535;
   font-weight: 600;
-}
-
-main article {
-  background-color: #F6F6F6;
 }
 
 main > header {

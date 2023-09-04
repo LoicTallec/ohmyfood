@@ -72,8 +72,10 @@
 .centermenu {
     display: flex;
     flex-direction: column;
-
+    
+    width: calc(100% - 20% / 2);
+    
     border: 20px solid $tertiary-color;
-    background-color: $background-main-color;
+    background-color: white;
 }
 
