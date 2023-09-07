@@ -6,7 +6,8 @@
 
 .functioning {
     @include display-secondary;
-    margin: 10px 0px 80px 0px;
+    margin: 10px 0px 0px 0px;
+    background-color: $footer-text-color;
     
     h2 {
         margin: 30px 20px 30px -50px;
@@ -16,6 +17,7 @@
         display: flex;
         flex-direction: column;
         max-width: 450px;
+        margin-bottom: 30px;
     } 
 
     li {
@@ -78,15 +80,24 @@
     color: $footer-text-color;
 }
 
-.fa-circle-check {
-    display: none;
-    color: $footer-color;
 
-    &:active {
-        display: block;
-    }
-}
 
 /********************* PAGE 2 ************************/
 
+
+.fa-circle-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    color: $footer-text-color;
+    background-color: $tertiary-color;
+    height: 60px;
+    margin-left: 10px;
+    border-radius: 0px 10px 10px 0px;
+    top: 0;
+    right: -60px;
+
+}
 

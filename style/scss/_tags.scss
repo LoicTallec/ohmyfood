@@ -15,6 +15,7 @@ figure {
     margin: 0;
 }
 
+
 img {
     max-width: 100%;
     height: auto;
@@ -94,6 +95,8 @@ main > header {
     padding: 30px 15px 30px 15px; 
     background-color: $background-main-color;
     border-radius: 0%;
+    max-width: 450px;
+    margin: auto;
     
     h2 {
         font-size: 20px;
@@ -184,7 +187,7 @@ nav {
 
         .fa-solid {
             color: $main-text-color;
-            padding-left: 30px;
+            padding-left: 10px;
         }
     
         img {
@@ -214,6 +217,10 @@ article header {
     h1 {
         font-family: $main-font;
     }
+
+    i:active {
+        color: $main-color;
+    }
 }
 
 
@@ -233,9 +240,11 @@ article section  {
     }
 
     li { 
+        position: relative;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        overflow: hidden;
         margin: 10px;
         background-color: $footer-text-color;
         padding: 10px;
@@ -243,12 +252,19 @@ article section  {
         border-radius: 10px;
         box-shadow: $secondary-shadow-box 0px 5px 15px 0px;
         margin-top: 3px;
-        
-        &:active { 
-            i {
-                display: flex;  
 
-            }    
+
+        &:active,
+        &:focus { 
+            i {
+                transition: 0.4s;
+                right: 0;
+            }
+            
+            b {
+                transition: 0.4s;
+                margin-right: 60px;
+            }
         }
 
         h3 {
