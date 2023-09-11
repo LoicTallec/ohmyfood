@@ -102,10 +102,6 @@ main > header {
         font-size: 20px;
     }
 
-    ul {
-        max-width: 450px;
-        margin: auto;
-    } 
 }
     
 
@@ -219,7 +215,7 @@ article header {
     }
 
     i:active {
-        color: $main-color;
+        background-color: black;
     }
 }
 

@@ -13,13 +13,6 @@
         margin: 30px 20px 30px -50px;
     }
 
-    ul {
-        display: flex;
-        flex-direction: column;
-        max-width: 450px;
-        margin-bottom: 30px;
-    } 
-
     li {
         width: 100%;
         max-width: 200px;
@@ -49,6 +42,29 @@
     li:hover i,
     li:focus i {
         color: $main-color;
+    }
+
+    @media screen and (min-width: 900px) {
+        align-items: start;
+        max-width: 900px;
+        margin: auto;
+        
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+           
+        }
+
+        li {
+            margin: 0px 0px 40px 30px;
+        }
+
+        h2 {
+            margin: 30px 0px 30px 30px;
+            
+        }
     }
 }
 
