@@ -1,4 +1,4 @@
-.fa-solid {
+.fa-location-dot {
     color: $fa-solid-main-color;
 }
 
@@ -37,6 +37,7 @@
     i {
         margin-right: 10px;
         align-items: center;
+        color: $fa-solid-main-color;
     }
 
     li:hover i,
@@ -44,7 +45,7 @@
         color: $main-color;
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 768px) {
         align-items: start;
         max-width: 900px;
         margin: auto;
@@ -74,7 +75,7 @@
     border-radius: 50px 50px 0 0;
     margin: auto;
     margin-top: -40px;
-    max-width: 1500px;
+    max-width: 1000px;
     padding-bottom: 40px;
     
     button {
@@ -114,6 +115,31 @@
     border-radius: 0px 10px 10px 0px;
     top: 0;
     right: -60px;
+
+}
+
+.full {
+    height: 24px;
+    position: absolute;
+    padding-top: 14px;
+    top: 23px;
+    opacity: 0;
+
+
+    &:hover {
+        opacity: 1;
+        background: -webkit-linear-gradient($gradian-color);
+        background-clip: text;
+        -webkit-background-clip:text;
+        color:transparent;
+    }
+
+
+}
+
+.empty {
+    opacity: 1;
+
 
 }
 

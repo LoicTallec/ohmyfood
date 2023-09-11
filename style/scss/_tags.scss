@@ -91,7 +91,7 @@ main > header {
     }
 }
 
-[id*="restaurants"] {
+[id="restaurants"] {
     padding: 30px 15px 30px 15px; 
     background-color: $background-main-color;
     border-radius: 0%;
@@ -101,44 +101,45 @@ main > header {
     h2 {
         font-size: 20px;
     }
-
-}
     
-
-figure {
+    figure {
     position: relative;
     background-color: $footer-text-color;
     border-radius: $figure-radius;
 
-    img {
-        width: 450px;
-        height: 140px;
-        border-radius: $figure-radius $figure-radius 0 0;
-    }
-
-    & > p { 
-        position: absolute;
-        right: 20px;
-        background: $tertiary-color;
-        padding: 5px 10px;
-        border-radius: 2px;
-        color: $news-color;
-    }
-
-    figcaption {
-        position: relative;
-        height: 60px;
-        margin: 10px 20px 20px 20px;
-        p,
-        h3 {
-            margin: 0px 0px 5px;
+        img {
+            width: 450px;
+            height: 140px;
+            border-radius: $figure-radius $figure-radius 0 0;
         }
 
-        i {
+        & > p { 
             position: absolute;
-            right: 10px;
-            top: 35%;
+            right: 20px;
+            background: $tertiary-color;
+            padding: 5px 10px;
+            border-radius: 2px;
+            color: $news-color;
+        }
 
+        figcaption {
+            position: relative;
+            height: 60px;
+            margin: 10px 20px 20px 20px;
+            p,
+            h3 {
+                margin: 0px 0px 5px;
+            }
+
+            i {
+                position: absolute;
+                right: 10px;
+                top: 35%;
+            }
+            
+            .full {
+                top: 7px;
+            }
         }
     }
 }
@@ -214,8 +215,21 @@ article header {
         font-family: $main-font;
     }
 
-    i:hover {
-        background-color: black;
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+
+        h1 {
+            margin-right: 30px;
+        }
+    }
+
+    figure {
+        width: 16px;
+        height: 16px;
+
+        img {
+            width: 16px;
+        }
     }
 }
 

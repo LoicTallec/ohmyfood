@@ -1,7 +1,7 @@
 /************** Color ****************/
 /****************** Display mixins ******************/
 /********************* bouton ***********************/
-.fa-solid {
+.fa-location-dot {
   color: #7E7E7E;
 }
 
@@ -37,12 +37,13 @@
 .functioning i {
   margin-right: 10px;
   align-items: center;
+  color: #7E7E7E;
 }
 .functioning li:hover i,
 .functioning li:focus i {
   color: #9356DC;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 768px) {
   .functioning {
     align-items: start;
     max-width: 900px;
@@ -68,7 +69,7 @@
   border-radius: 50px 50px 0 0;
   margin: auto;
   margin-top: -40px;
-  max-width: 1500px;
+  max-width: 1000px;
   padding-bottom: 40px;
 }
 .menu-list button {
@@ -113,6 +114,25 @@
   border-radius: 0px 10px 10px 0px;
   top: 0;
   right: -60px;
+}
+
+.full {
+  height: 24px;
+  position: absolute;
+  padding-top: 14px;
+  top: 23px;
+  opacity: 0;
+}
+.full:hover {
+  opacity: 1;
+  background: -webkit-linear-gradient(-10deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.empty {
+  opacity: 1;
 }
 
 /*********************** Page 1 ***********************/
@@ -211,28 +231,27 @@ main > header a:hover, main > header a:focus {
   box-shadow: #cccccc 0px 5px 10px 4px;
 }
 
-[id*=restaurants] {
+[id=restaurants] {
   padding: 30px 15px 30px 15px;
   background-color: #F6F6F6;
   border-radius: 0%;
   max-width: 450px;
   margin: auto;
 }
-[id*=restaurants] h2 {
+[id=restaurants] h2 {
   font-size: 20px;
 }
-
-figure {
+[id=restaurants] figure {
   position: relative;
   background-color: white;
   border-radius: 20px;
 }
-figure img {
+[id=restaurants] figure img {
   width: 450px;
   height: 140px;
   border-radius: 20px 20px 0 0;
 }
-figure > p {
+[id=restaurants] figure > p {
   position: absolute;
   right: 20px;
   background: #99E2D0;
@@ -240,19 +259,22 @@ figure > p {
   border-radius: 2px;
   color: #008766;
 }
-figure figcaption {
+[id=restaurants] figure figcaption {
   position: relative;
   height: 60px;
   margin: 10px 20px 20px 20px;
 }
-figure figcaption p,
-figure figcaption h3 {
+[id=restaurants] figure figcaption p,
+[id=restaurants] figure figcaption h3 {
   margin: 0px 0px 5px;
 }
-figure figcaption i {
+[id=restaurants] figure figcaption i {
   position: absolute;
   right: 10px;
   top: 35%;
+}
+[id=restaurants] figure figcaption .full {
+  top: 7px;
 }
 
 footer {
@@ -314,8 +336,20 @@ article header {
 article header h1 {
   font-family: "Shrikhand", cursive;
 }
-article header i:hover {
-  background-color: black;
+@media screen and (min-width: 768px) {
+  article header {
+    justify-content: center;
+  }
+  article header h1 {
+    margin-right: 30px;
+  }
+}
+article header figure {
+  width: 16px;
+  height: 16px;
+}
+article header figure img {
+  width: 16px;
 }
 
 article section {
