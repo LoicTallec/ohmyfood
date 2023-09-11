@@ -214,7 +214,7 @@ article header {
         font-family: $main-font;
     }
 
-    i:active {
+    i:hover {
         background-color: black;
     }
 }
@@ -250,7 +250,7 @@ article section  {
         margin-top: 3px;
 
 
-        &:active,
+        &:hover,
         &:focus { 
             i {
                 transition: 0.4s;

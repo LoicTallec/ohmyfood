@@ -314,7 +314,7 @@ article header {
 article header h1 {
   font-family: "Shrikhand", cursive;
 }
-article header i:active {
+article header i:hover {
   background-color: black;
 }
 
@@ -346,11 +346,11 @@ article section li {
   box-shadow: #dfdfdf 0px 5px 15px 0px;
   margin-top: 3px;
 }
-article section li:active i, article section li:focus i {
+article section li:hover i, article section li:focus i {
   transition: 0.4s;
   right: 0;
 }
-article section li:active b, article section li:focus b {
+article section li:hover b, article section li:focus b {
   transition: 0.4s;
   margin-right: 60px;
 }
