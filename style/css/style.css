@@ -13,13 +13,19 @@
   background-color: white;
 }
 .functioning h2 {
-  margin: 30px 20px 30px -50px;
+  width: 100%;
+  text-align: center;
+  margin: 30px 0px 10px -100px;
+  font-size: 18px;
+}
+.functioning ul {
+  margin-bottom: 30px;
 }
 .functioning li {
   width: 100%;
   max-width: 200px;
   margin-bottom: 20px;
-  padding: 20px 70px 20px 0px;
+  padding: 20px 30px 20px 0px;
   background-color: #F6F6F6;
   border-radius: 15px;
   box-shadow: #dfdfdf 0px 5px 15px 0px;
@@ -46,7 +52,6 @@
 @media screen and (min-width: 768px) {
   .functioning {
     align-items: start;
-    max-width: 900px;
     margin: auto;
   }
   .functioning ul {
@@ -54,12 +59,14 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0;
   }
   .functioning li {
     margin: 0px 0px 40px 30px;
   }
   .functioning h2 {
-    margin: 30px 0px 30px 30px;
+    margin-left: -280px;
+    margin-top: 40px;
   }
 }
 
@@ -73,7 +80,7 @@
   padding-bottom: 40px;
 }
 .menu-list button {
-  background: linear-gradient(-10deg, #9356DC, #FF79DA);
+  background: linear-gradient(-20deg, #9356DC, #FF79DA);
   border-radius: 30px;
   font-size: 14px;
   padding: 15px 25px 15px 25px;
@@ -123,22 +130,17 @@
   top: 23px;
   opacity: 0;
 }
-.full:hover {
+.full:hover, .full:focus {
   opacity: 1;
-  background: -webkit-linear-gradient(-10deg, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(-20deg, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.empty {
-  opacity: 1;
-}
-
 /*********************** Page 1 ***********************/
 body {
   margin: 0;
-  background-color: white;
 }
 
 ul {
@@ -209,7 +211,7 @@ main > header {
   height: 260px;
 }
 main > header h2 {
-  margin: 30px 20px 20px 20px;
+  margin: 20px 20px 20px 20px;
 }
 main > header p {
   margin: 0px 20px 40px 20px;
@@ -217,7 +219,7 @@ main > header p {
   color: #353535;
 }
 main > header a {
-  background: linear-gradient(-10deg, #9356DC, #FF79DA);
+  background: linear-gradient(-20deg, #9356DC, #FF79DA);
   border-radius: 30px;
   font-size: 14px;
   padding: 15px 25px 15px 25px;
@@ -230,16 +232,37 @@ main > header a:hover, main > header a:focus {
   background: linear-gradient(-10deg, #a674e2, #ff9de4);
   box-shadow: #cccccc 0px 5px 10px 4px;
 }
+@media screen and (min-width: 768px) {
+  main > header {
+    height: 210px;
+  }
+  main > header h2 {
+    font-size: 30px;
+  }
+}
 
 [id=restaurants] {
-  padding: 30px 15px 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 15px 30px 15px;
   background-color: #F6F6F6;
   border-radius: 0%;
-  max-width: 450px;
   margin: auto;
 }
 [id=restaurants] h2 {
   font-size: 20px;
+  margin: 30px 0px 30px 0px;
+  width: 100%;
+  text-align: center;
+}
+[id=restaurants] li {
+  margin: auto;
+  max-width: 450px;
+  margin-bottom: 20px;
+}
+[id=restaurants] ul {
+  width: 100%;
 }
 [id=restaurants] figure {
   position: relative;
@@ -247,7 +270,7 @@ main > header a:hover, main > header a:focus {
   border-radius: 20px;
 }
 [id=restaurants] figure img {
-  width: 450px;
+  max-width: 450px;
   height: 140px;
   border-radius: 20px 20px 0 0;
 }
@@ -262,7 +285,7 @@ main > header a:hover, main > header a:focus {
 [id=restaurants] figure figcaption {
   position: relative;
   height: 60px;
-  margin: 10px 20px 20px 20px;
+  margin: 10px 20px 0px 20px;
 }
 [id=restaurants] figure figcaption p,
 [id=restaurants] figure figcaption h3 {
@@ -275,6 +298,35 @@ main > header a:hover, main > header a:focus {
 }
 [id=restaurants] figure figcaption .full {
   top: 7px;
+}
+@media screen and (min-width: 768px) {
+  [id=restaurants] {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  [id=restaurants] h2 {
+    margin-left: 0;
+    width: 100%;
+  }
+  [id=restaurants] ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0px 50px 0px 50px;
+    margin: auto;
+  }
+  [id=restaurants] li {
+    margin-bottom: 0;
+    width: 45%;
+    max-width: 450px;
+  }
+  [id=restaurants] img {
+    max-width: 450px;
+  }
 }
 
 footer {
@@ -297,6 +349,26 @@ footer li a {
 }
 footer li a i {
   margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 50px;
+  }
+  footer h3 {
+    width: 10%;
+    margin: 0px 20px 0px 40px;
+  }
+  footer ul {
+    display: flex;
+  }
+  footer li {
+    margin: 0px 0px 0px 20px;
+  }
+  footer i {
+    margin-right: 0px;
+  }
 }
 
 /************************ PAGE 2 **************************/
