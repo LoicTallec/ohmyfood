@@ -109,6 +109,7 @@ main > header {
     border-radius: 0%;
     margin: auto;
     
+    
     h2 {
         font-size: 20px;
         margin: 30px 0px 30px 0px;
@@ -318,15 +319,15 @@ article section  {
     flex-wrap: wrap;
     max-width: 700px;
     margin: auto;
+    
 
     ul {
         margin: auto;
-        min-width: 350px;
         max-width: 700px;
         width: 100%;
     }
 
-    li { 
+    li {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -339,7 +340,11 @@ article section  {
         border-radius: 10px;
         box-shadow: $secondary-shadow-box 0px 5px 15px 0px;
         margin-top: 3px;
-
+        
+        b {
+            font-weight: 700;
+            display: flex;
+        }
 
         &:hover,
         &:focus { 
@@ -351,21 +356,30 @@ article section  {
             b {
                 transition: 0.4s;
                 margin-right: 60px;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding-left: .5rem;
+
             }
         }
 
         h3 {
             font-size: 14px;
-            margin: 0px 0px 7px 0px;
+            margin: 0px 0px 7px 0px;  
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;             
         }
-
+    
         p {
             display: flex;
             justify-content: space-between;
             font-size: 12px;
             margin: 0;
- 
-        }    
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        } 
     }
 
     h2 {
