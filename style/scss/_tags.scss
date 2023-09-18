@@ -312,7 +312,7 @@ article header {
 }
 
 
-article section  {
+article > section  {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -320,6 +320,17 @@ article section  {
     max-width: 700px;
     margin: auto;
     
+    &:first-of-type {
+        animation: menu 1s;
+    }
+    
+    &:nth-of-type(2) {
+        animation: menu 2s;
+    }
+
+    &:last-of-type {
+        animation: menu 3s;
+    }
 
     ul {
         margin: auto;
@@ -341,10 +352,7 @@ article section  {
         box-shadow: $secondary-shadow-box 0px 5px 15px 0px;
         margin-top: 3px;
         
-        b {
-            font-weight: 700;
-            display: flex;
-        }
+        
 
         &:hover,
         &:focus { 
@@ -355,31 +363,41 @@ article section  {
             
             b {
                 transition: 0.4s;
-                margin-right: 60px;
-                justify-content: flex-end;
-                align-items: flex-end;
-                padding-left: .5rem;
-
+                                    
             }
         }
 
-        h3 {
-            font-size: 14px;
-            margin: 0px 0px 7px 0px;  
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;             
-        }
-    
-        p {
+        b {
+            margin-top: 22px;
             display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin: 0;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            justify-content: flex-end;
+            
+        }
+
+        section {
             overflow: hidden;
-        } 
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+
+            h3 {
+                font-size: 14px;
+                margin: 0px 0px 7px 0px;  
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        
+            p {
+                max-width: 100%;
+                font-size: 12px;
+                margin: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            
+        }    
     }
 
     h2 {

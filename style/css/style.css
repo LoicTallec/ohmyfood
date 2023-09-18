@@ -1,143 +1,14 @@
 /************** Color ****************/
 /****************** Display mixins ******************/
 /********************* bouton ***********************/
-.fa-location-dot {
-  color: #7E7E7E;
-}
-
-.functioning {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 0px 0px 0px;
-  background-color: white;
-}
-.functioning h2 {
-  width: 100%;
-  text-align: center;
-  margin: 30px 0px 10px -100px;
-  font-size: 18px;
-}
-.functioning ul {
-  margin-bottom: 30px;
-}
-.functioning li {
-  width: 100%;
-  max-width: 200px;
-  margin-bottom: 20px;
-  padding: 20px 30px 20px 0px;
-  background-color: #F6F6F6;
-  border-radius: 15px;
-  box-shadow: #dfdfdf 0px 5px 15px 0px;
-  font-size: 13px;
-}
-.functioning span {
-  margin-right: 10px;
-  background-color: #9356DC;
-  color: white;
-  font-size: 10px;
-  border-radius: 30px;
-  padding: 3px 7px 3px 7px;
-  margin-left: -8px;
-}
-.functioning i {
-  margin-right: 10px;
-  align-items: center;
-  color: #7E7E7E;
-}
-.functioning li:hover i,
-.functioning li:focus i {
-  color: #9356DC;
-}
-@media screen and (min-width: 768px) {
-  .functioning {
-    align-items: start;
-    margin: auto;
+@keyframes menu {
+  from {
+    opacity: 0;
   }
-  .functioning ul {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0;
-  }
-  .functioning li {
-    margin: 0px 0px 40px 30px;
-  }
-  .functioning h2 {
-    margin-left: -280px;
-    margin-top: 40px;
+  to {
+    opacity: 1;
   }
 }
-
-.menu-list {
-  position: relative;
-  background-color: #F6F6F6;
-  border-radius: 50px 50px 0 0;
-  margin: auto;
-  margin-top: -40px;
-  max-width: 1000px;
-  padding-bottom: 40px;
-}
-.menu-list button {
-  background: linear-gradient(-20deg, #9356DC, #FF79DA);
-  border-radius: 30px;
-  font-size: 14px;
-  padding: 15px 25px 15px 25px;
-  color: white;
-  width: 250px;
-  box-shadow: #cccccc 0px 5px 10px 0px;
-  border: none;
-  display: flex;
-  justify-content: center;
-  margin: 40px auto 1% auto;
-}
-.menu-list button:hover, .menu-list button:focus {
-  transition: all 0.5s;
-  background: linear-gradient(-10deg, #a674e2, #ff9de4);
-  box-shadow: #cccccc 0px 5px 10px 4px;
-}
-
-.fa-handshake-angle {
-  margin-right: 5px;
-}
-
-.fa-handshake-angle,
-.fa-utensils {
-  color: white;
-}
-
-/********************* PAGE 2 ************************/
-.fa-circle-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 60px;
-  color: white;
-  background-color: #99E2D0;
-  height: 60px;
-  margin-left: 10px;
-  border-radius: 0px 10px 10px 0px;
-  top: 0;
-  right: -60px;
-}
-
-.full {
-  height: 24px;
-  position: absolute;
-  padding-top: 14px;
-  top: 23px;
-  opacity: 0;
-}
-.full:hover, .full:focus {
-  opacity: 1;
-  background: -webkit-linear-gradient(-20deg, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
 /*********************** Page 1 ***********************/
 body {
   margin: 0;
@@ -424,7 +295,7 @@ article header figure img {
   width: 16px;
 }
 
-article section {
+article > section {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -432,12 +303,21 @@ article section {
   max-width: 700px;
   margin: auto;
 }
-article section ul {
+article > section:first-of-type {
+  animation: menu 1s;
+}
+article > section:nth-of-type(2) {
+  animation: menu 2s;
+}
+article > section:last-of-type {
+  animation: menu 3s;
+}
+article > section ul {
   margin: auto;
   max-width: 700px;
   width: 100%;
 }
-article section li {
+article > section li {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -451,44 +331,183 @@ article section li {
   box-shadow: #dfdfdf 0px 5px 15px 0px;
   margin-top: 3px;
 }
-article section li b {
-  font-weight: 700;
-  display: flex;
-}
-article section li:hover i, article section li:focus i {
+article > section li:hover i, article > section li:focus i {
   transition: 0.4s;
   right: 0;
 }
-article section li:hover b, article section li:focus b {
+article > section li:hover b, article > section li:focus b {
   transition: 0.4s;
-  margin-right: 60px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-left: 0.5rem;
 }
-article section li h3 {
+article > section li b {
+  margin-top: 22px;
+  display: flex;
+  justify-content: flex-end;
+}
+article > section li section {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+article > section li section h3 {
   font-size: 14px;
   margin: 0px 0px 7px 0px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-article section li p {
-  display: flex;
-  justify-content: space-between;
+article > section li section p {
+  max-width: 100%;
   font-size: 12px;
   margin: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-article section h2 {
+article > section h2 {
   font-size: 20px;
   font-weight: 100;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-bottom: 3px;
   margin-left: 10px;
+}
+
+.fa-location-dot {
+  color: #7E7E7E;
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px 0px 0px;
+  background-color: white;
+}
+.functioning h2 {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0px 10px -100px;
+  font-size: 18px;
+}
+.functioning ul {
+  margin-bottom: 30px;
+}
+.functioning li {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 20px;
+  padding: 20px 30px 20px 0px;
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  box-shadow: #dfdfdf 0px 5px 15px 0px;
+  font-size: 13px;
+}
+.functioning span {
+  margin-right: 10px;
+  background-color: #9356DC;
+  color: white;
+  font-size: 10px;
+  border-radius: 30px;
+  padding: 3px 7px 3px 7px;
+  margin-left: -8px;
+}
+.functioning i {
+  margin-right: 10px;
+  align-items: center;
+  color: #7E7E7E;
+}
+.functioning li:hover i,
+.functioning li:focus i {
+  color: #9356DC;
+}
+@media screen and (min-width: 768px) {
+  .functioning {
+    align-items: start;
+    margin: auto;
+  }
+  .functioning ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+  }
+  .functioning li {
+    margin: 0px 0px 40px 30px;
+  }
+  .functioning h2 {
+    margin-left: -280px;
+    margin-top: 40px;
+  }
+}
+
+.menu-list {
+  position: relative;
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0 0;
+  margin: auto;
+  margin-top: -40px;
+  max-width: 1000px;
+  padding-bottom: 40px;
+}
+.menu-list button {
+  background: linear-gradient(-20deg, #9356DC, #FF79DA);
+  border-radius: 30px;
+  font-size: 14px;
+  padding: 15px 25px 15px 25px;
+  color: white;
+  width: 250px;
+  box-shadow: #cccccc 0px 5px 10px 0px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 1% auto;
+}
+.menu-list button:hover, .menu-list button:focus {
+  transition: all 0.5s;
+  background: linear-gradient(-10deg, #a674e2, #ff9de4);
+  box-shadow: #cccccc 0px 5px 10px 4px;
+}
+
+.fa-handshake-angle {
+  margin-right: 5px;
+}
+
+.fa-handshake-angle,
+.fa-utensils {
+  color: white;
+}
+
+/********************* PAGE 2 ************************/
+.fa-circle-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60px;
+  color: white;
+  background-color: #99E2D0;
+  height: 60px;
+  margin-left: 10px;
+  border-radius: 0px 10px 10px 0px;
+  top: 0;
+  right: -60px;
+}
+
+.full {
+  height: 24px;
+  position: absolute;
+  padding-top: 14px;
+  top: 24px;
+  opacity: 0;
+}
+.full:hover, .full:focus {
+  opacity: 1;
+  background: -webkit-linear-gradient(-20deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
