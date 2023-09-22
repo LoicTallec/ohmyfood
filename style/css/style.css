@@ -113,23 +113,17 @@ main > header a:hover, main > header a:focus {
 }
 
 [id=restaurants] {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px 15px 30px 15px;
+  padding: 0px 20px 30px 20px;
   background-color: #F6F6F6;
   border-radius: 0%;
   margin: auto;
 }
 [id=restaurants] h2 {
   font-size: 20px;
-  margin: 30px 0px 30px 0px;
-  width: 100%;
-  text-align: center;
+  margin-top: 50px;
+  text-align: start;
 }
 [id=restaurants] li {
-  margin: auto;
-  max-width: 450px;
   margin-bottom: 20px;
 }
 [id=restaurants] ul {
@@ -141,8 +135,7 @@ main > header a:hover, main > header a:focus {
   border-radius: 20px;
 }
 [id=restaurants] figure img {
-  max-width: 450px;
-  height: 140px;
+  height: 160px;
   border-radius: 20px 20px 0 0;
 }
 [id=restaurants] figure > p {
@@ -172,12 +165,14 @@ main > header a:hover, main > header a:focus {
 }
 @media screen and (min-width: 768px) {
   [id=restaurants] {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 1000px;
   }
   [id=restaurants] h2 {
-    margin-left: 0;
-    width: 100%;
+    margin: 25px 0px 25px 20px;
+    font-size: 20px;
   }
   [id=restaurants] ul {
     display: flex;
@@ -187,7 +182,6 @@ main > header a:hover, main > header a:focus {
     gap: 50px;
     width: 100%;
     max-width: 1000px;
-    padding: 0px 50px 0px 50px;
     margin: auto;
   }
   [id=restaurants] li {
@@ -198,6 +192,10 @@ main > header a:hover, main > header a:focus {
   [id=restaurants] img {
     max-width: 450px;
   }
+}
+
+[id=firstpage] {
+  background-color: #F6F6F6;
 }
 
 footer {
@@ -304,13 +302,13 @@ article > section {
   margin: auto;
 }
 article > section:first-of-type {
-  animation: menu 1s;
-}
-article > section:nth-of-type(2) {
   animation: menu 2s;
 }
-article > section:last-of-type {
+article > section:nth-of-type(2) {
   animation: menu 3s;
+}
+article > section:last-of-type {
+  animation: menu 4s;
 }
 article > section ul {
   margin: auto;
@@ -320,8 +318,6 @@ article > section ul {
 article > section li {
   position: relative;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   overflow: hidden;
   margin: 10px;
   background-color: white;
@@ -331,23 +327,27 @@ article > section li {
   box-shadow: #dfdfdf 0px 5px 15px 0px;
   margin-top: 3px;
 }
+article > section li b {
+  display: flex;
+  transition: all 0.5s;
+  align-items: end;
+}
+article > section li i {
+  transition: all 0.5s;
+}
 article > section li:hover i, article > section li:focus i {
-  transition: 0.4s;
+  transition: 0.5s;
   right: 0;
 }
 article > section li:hover b, article > section li:focus b {
-  transition: 0.4s;
-}
-article > section li b {
-  margin-top: 22px;
-  display: flex;
-  justify-content: flex-end;
+  margin-right: 60px;
+  transition: 0.5s;
 }
 article > section li section {
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 100%;
 }
 article > section li section h3 {
   font-size: 14px;
@@ -357,7 +357,6 @@ article > section li section h3 {
   white-space: nowrap;
 }
 article > section li section p {
-  max-width: 100%;
   font-size: 12px;
   margin: 0;
   overflow: hidden;
@@ -383,25 +382,30 @@ article > section h2 {
   align-items: center;
   margin: 10px 0px 0px 0px;
   background-color: white;
+  padding: 0px 20px;
 }
-.functioning h2 {
+.functioning .aligntext {
   width: 100%;
-  text-align: center;
-  margin: 30px 0px 10px -100px;
-  font-size: 18px;
+}
+.functioning .aligntext h2 {
+  font-size: 20px;
+  margin: 40px 0px 15px 0px;
 }
 .functioning ul {
-  margin-bottom: 30px;
+  margin: 0px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .functioning li {
   width: 100%;
-  max-width: 200px;
   margin-bottom: 20px;
-  padding: 20px 30px 20px 0px;
+  padding: 25px 30px 25px 0px;
   background-color: #F6F6F6;
   border-radius: 15px;
   box-shadow: #dfdfdf 0px 5px 15px 0px;
   font-size: 13px;
+  white-space: nowrap;
 }
 .functioning span {
   margin-right: 10px;
@@ -423,22 +427,35 @@ article > section h2 {
 }
 @media screen and (min-width: 768px) {
   .functioning {
-    align-items: start;
-    margin: auto;
+    padding: 0px 0px 20px 40px;
   }
   .functioning ul {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0;
+    margin: auto;
   }
   .functioning li {
-    margin: 0px 0px 40px 30px;
+    margin-right: 30px;
   }
-  .functioning h2 {
-    margin-left: -280px;
-    margin-top: 40px;
+  .functioning span {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .functioning li {
+    padding: 25px 30px 25px 0px;
+    max-width: 280px;
+    font-size: 16px;
+  }
+  .functioning .aligntext {
+    max-width: 1000px;
+  }
+  .functioning .aligntext h2 {
+    width: 100%;
+    text-align: start;
+    font-size: 20px;
   }
 }
 
@@ -499,7 +516,7 @@ article > section h2 {
   height: 24px;
   position: absolute;
   padding-top: 14px;
-  top: 24px;
+  top: 23px;
   opacity: 0;
 }
 .full:hover, .full:focus {
@@ -508,6 +525,13 @@ article > section h2 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.price b {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  height: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

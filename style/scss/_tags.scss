@@ -101,10 +101,7 @@ main > header {
 }
 
 [id="restaurants"] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 15px 30px 15px; 
+    padding: 0px 20px 30px 20px; 
     background-color: $background-main-color;
     border-radius: 0%;
     margin: auto;
@@ -112,28 +109,28 @@ main > header {
     
     h2 {
         font-size: 20px;
-        margin: 30px 0px 30px 0px;
-        width: 100%;
-        text-align: center;
+        margin-top: 50px;
+        
+        text-align: start;
     }
 
     li {
-        margin: auto;
-        max-width: 450px;
+        
         margin-bottom: 20px;
     }
     
     ul {
         width: 100%;
     }
+
     figure {
         position: relative;
         background-color: $footer-text-color;
         border-radius: $figure-radius;
 
         img {
-            max-width: 450px;
-            height: 140px;
+            
+            height: 160px;
             border-radius: $figure-radius $figure-radius 0 0;
         }
 
@@ -168,12 +165,14 @@ main > header {
     }
 
     @media screen and (min-width: 768px) {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        
+        max-width: 1000px;
+
         h2 {
-            margin-left: 0;
-            width: 100%;
+            margin: 25px 0px 25px 20px;
+            font-size: 20px;
         }
 
         ul {
@@ -184,7 +183,6 @@ main > header {
             gap: 50px;
             width: 100%;
             max-width: 1000px;
-            padding: 0px 50px 0px 50px;
             margin: auto;
         }
 
@@ -198,6 +196,10 @@ main > header {
             max-width: 450px;
         }
     }
+}
+
+[id="firstpage"] {
+    background-color: $background-main-color;
 }
 
 footer {
@@ -321,15 +323,15 @@ article > section  {
     margin: auto;
     
     &:first-of-type {
-        animation: menu 1s;
+        animation: menu 2s ;
     }
     
     &:nth-of-type(2) {
-        animation: menu 2s;
+        animation: menu 3s ;
     }
 
     &:last-of-type {
-        animation: menu 3s;
+        animation: menu 4s ;
     }
 
     ul {
@@ -341,8 +343,6 @@ article > section  {
     li {
         position: relative;
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
         overflow: hidden;
         margin: 10px;
         background-color: $footer-text-color;
@@ -351,35 +351,40 @@ article > section  {
         border-radius: 10px;
         box-shadow: $secondary-shadow-box 0px 5px 15px 0px;
         margin-top: 3px;
-        
-        
 
+        b {
+            display: flex;
+            transition: all 0.5s;
+            align-items: end;
+        }
+
+        i {
+            transition: all 0.5s;
+        }
+        
         &:hover,
-        &:focus { 
+        &:focus {
+             
             i {
-                transition: 0.4s;
+                transition: .5s;
                 right: 0;
             }
             
             b {
-                transition: 0.4s;
-                                    
+                margin-right: 60px;
+                transition: .5s;
+                               
             }
         }
 
-        b {
-            margin-top: 22px;
-            display: flex;
-            justify-content: flex-end;
-            
-        }
+        
 
         section {
+            width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            max-width: 100%;
-
+            
             h3 {
                 font-size: 14px;
                 margin: 0px 0px 7px 0px;  
@@ -389,7 +394,7 @@ article > section  {
             }
         
             p {
-                max-width: 100%;
+                
                 font-size: 12px;
                 margin: 0;
                 overflow: hidden;
