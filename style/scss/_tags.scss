@@ -69,7 +69,25 @@ form {
     }
 }
 
+/****************** LOADER ******************/
 
+[id="mainpage"] {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff; /* Couleur de fond du loader */
+        
+        z-index: 9999; /* Assurez-vous que le loader s'affiche au-dessus de tout le contenu */
+        animation: rotate 5s ease-out forwards;
+    }
+}
+/********************************************/
 
 main > header {
     text-align: center;
