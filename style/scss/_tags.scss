@@ -73,7 +73,7 @@ form {
 [id="mainpage"] {
     position: relative;
     z-index: 9999;
-    background: url('/images/logo/ohmyfood.png') no-repeat center;
+    background: url('../../images/logo/ohmyfood.png') no-repeat center;
     animation: load 3s linear forwards;
     top: 0;
 }
@@ -380,8 +380,7 @@ article > section  {
             
             b {
                 margin-right: 60px;
-                transition: .5s;
-                               
+                transition: .5s;              
             }
         }
 

@@ -87,7 +87,7 @@ form input {
 [id=mainpage] {
   position: relative;
   z-index: 9999;
-  background: url("/images/logo/ohmyfood.png") no-repeat center;
+  background: url("../../images/logo/ohmyfood.png") no-repeat center;
   animation: load 3s linear forwards;
   top: 0;
 }
@@ -117,7 +117,7 @@ main > header a {
   box-shadow: #cccccc 0px 5px 10px 0px;
 }
 main > header a:hover, main > header a:focus {
-  transition: all 0.5s;
+  transition: 1s;
   background: linear-gradient(-10deg, #a674e2, #ff9de4);
   box-shadow: #cccccc 0px 5px 10px 4px;
 }
@@ -390,8 +390,6 @@ article > section h2 {
   margin-left: 10px;
 }
 
-/****************** LOADER ******************/
-/********************************************/
 .fa-location-dot {
   color: #7E7E7E;
 }
@@ -500,9 +498,10 @@ article > section h2 {
   display: flex;
   justify-content: center;
   margin: 40px auto 1% auto;
+  transition: 1s;
 }
 .menu-list button:hover, .menu-list button:focus {
-  transition: all 0.5s;
+  transition: 1s;
   background: linear-gradient(-10deg, #a674e2, #ff9de4);
   box-shadow: #cccccc 0px 5px 10px 4px;
 }
