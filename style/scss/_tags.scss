@@ -73,9 +73,9 @@ form {
 [id="mainpage"] {
     position: relative;
     z-index: 9999;
-    width: 100%;
-    height: 100%;
-    animation: load 3s;
+    background: url('/images/logo/ohmyfood.png') no-repeat center;
+    animation: load 3s linear forwards;
+    top: 0;
 }
 
 /********************************************/
