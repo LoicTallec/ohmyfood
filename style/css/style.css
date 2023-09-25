@@ -2,19 +2,11 @@
 /****************** Display mixins ******************/
 /********************* bouton ***********************/
 @keyframes menu {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes load {
-  from {
+  50% {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 /*********************** Page 1 ***********************/
@@ -88,7 +80,7 @@ form input {
   position: relative;
   z-index: 9999;
   background: url("../../images/logo/ohmyfood.png") no-repeat center;
-  animation: load 3s linear forwards;
+  animation: menu 2s linear forwards;
   top: 0;
 }
 
@@ -222,7 +214,7 @@ footer {
   padding: 20px;
 }
 footer h3 {
-  margin: 0px 0px 15px 0px;
+  margin: 0 0 15px 0;
   font-family: "Shrikhand", cursive;
   font-weight: 100;
   font-size: 14px;
@@ -320,13 +312,13 @@ article > section {
   margin: auto;
 }
 article > section:first-of-type {
-  animation: menu 2s;
+  animation: menu 1s;
 }
 article > section:nth-of-type(2) {
-  animation: menu 3s;
+  animation: menu 2s;
 }
 article > section:last-of-type {
-  animation: menu 4s;
+  animation: menu 3s;
 }
 article > section ul {
   margin: auto;
@@ -398,6 +390,7 @@ article > section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-items: stre;
   margin: 10px 0px 0px 0px;
   background-color: white;
   padding: 0px 20px;
