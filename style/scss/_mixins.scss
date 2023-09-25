@@ -1,1 +1,46 @@
+/****************** Display mixins ******************/
+
+@mixin display-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin display-secondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/********************* bouton ***********************/
+
+@mixin btn-design {
+    background: linear-gradient($gradian-color);
+    border-radius: 30px;
+    font-size: 14px;
+    padding: 15px 25px 15px 25px;
+    color: white;
+    width: 250px;  
+    box-shadow: $shadows-box 0px 5px 10px 0px;
+    
+
+    &:hover,
+    &:focus {
+        transition: 1s;
+        background: linear-gradient($light-gradian);
+        box-shadow: $shadows-box 0px 5px 10px 4px;
+    }
+}
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
 

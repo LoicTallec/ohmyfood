@@ -1,3 +1,15 @@
+/************** Color ****************/
+/****************** Display mixins ******************/
+/********************* bouton ***********************/
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/*********************** Page 1 ***********************/
 body {
   margin: 0;
 }
@@ -20,41 +32,39 @@ img {
 
 a {
   text-decoration: none;
-  color: #000;
-  font-family: Roboto, sans-serif;
+  color: black;
 }
 
 p,
 h2,
 h3,
 li,
+a,
 span {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body > header {
   width: 100%;
   height: 60px;
-  box-shadow: #c5c5c5 0px 2px 3px 0px;
+  box-shadow: #cccccc 0px 2px 3px 0px;
   position: relative;
 }
 body > header h1 {
   text-align: center;
   margin: 0px;
   padding-top: 15px;
-  font-family: Shrikhand, cursive;
+  font-family: "Shrikhand", cursive;
   font-size: 25px;
 }
 
 form {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0px;
   padding: 15px;
   background-color: #EAEAEA;
-}
-form i {
-  color: #353535;
 }
 form input {
   border: none;
@@ -65,6 +75,16 @@ form input {
   font-weight: 600;
 }
 
+/****************** LOADER ******************/
+[id=mainpage] {
+  position: relative;
+  z-index: 9999;
+  background: url("../../images/logo/ohmyfood.png") no-repeat center;
+  animation: menu 2s linear forwards;
+  top: 0;
+}
+
+/********************************************/
 main > header {
   text-align: center;
   background-color: #F6F6F6;
@@ -72,7 +92,7 @@ main > header {
   height: 260px;
 }
 main > header h2 {
-  margin: 30px 20px 20px 20px;
+  margin: 20px 20px 20px 20px;
 }
 main > header p {
   margin: 0px 20px 40px 20px;
@@ -80,37 +100,112 @@ main > header p {
   color: #353535;
 }
 main > header a {
-  background: linear-gradient(-10deg, #9356DC, #FF79DA);
+  background: linear-gradient(-20deg, #9356DC, #FF79DA);
   border-radius: 30px;
   font-size: 14px;
   padding: 15px 25px 15px 25px;
   color: white;
   width: 250px;
-  box-shadow: #888888 0px 5px 10px 0px;
+  box-shadow: #cccccc 0px 5px 10px 0px;
 }
-main > header a:hover {
-  background: linear-gradient(-10deg, #a073d8, #fd9ee2);
-  box-shadow: #b3b3b3 0px 0px 5px 3px;
+main > header a:hover, main > header a:focus {
+  transition: 1s;
+  background: linear-gradient(-10deg, #a674e2, #ff9de4);
+  box-shadow: #cccccc 0px 5px 10px 4px;
+}
+@media screen and (min-width: 768px) {
+  main > header {
+    height: 210px;
+  }
+  main > header h2 {
+    font-size: 30px;
+  }
 }
 
-article {
-  display: flex;
-  flex-direction: column;
+[id=restaurants] {
+  padding: 0px 20px 30px 20px;
   background-color: #F6F6F6;
-  padding: 30px 15px 30px 15px;
+  border-radius: 0%;
+  margin: auto;
 }
-article h2 {
-  font-family: Roboto, sans-serif;
+[id=restaurants] h2 {
   font-size: 20px;
+  margin-top: 50px;
+  text-align: start;
 }
-article ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+[id=restaurants] li {
+  margin-bottom: 20px;
 }
-article ul figure img {
-  width: 450px;
+[id=restaurants] ul {
+  width: 100%;
+}
+[id=restaurants] figure {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+}
+[id=restaurants] figure img {
   height: 160px;
+  border-radius: 20px 20px 0 0;
+}
+[id=restaurants] figure > p {
+  position: absolute;
+  right: 20px;
+  background: #99E2D0;
+  padding: 5px 10px;
+  border-radius: 2px;
+  color: #008766;
+}
+[id=restaurants] figure figcaption {
+  position: relative;
+  height: 60px;
+  margin: 10px 20px 0px 20px;
+}
+[id=restaurants] figure figcaption p,
+[id=restaurants] figure figcaption h3 {
+  margin: 0px 0px 5px;
+}
+[id=restaurants] figure figcaption i {
+  position: absolute;
+  right: 10px;
+  top: 35%;
+}
+[id=restaurants] figure figcaption .full {
+  top: 7px;
+}
+@media screen and (min-width: 768px) {
+  [id=restaurants] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+  [id=restaurants] h2 {
+    margin: 25px 0px 25px 20px;
+    font-size: 20px;
+  }
+  [id=restaurants] ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  [id=restaurants] li {
+    margin-bottom: 0;
+    width: 45%;
+    max-width: 450px;
+  }
+  [id=restaurants] img {
+    max-width: 450px;
+  }
+}
+
+[id=firstpage] {
+  background-color: #F6F6F6;
 }
 
 footer {
@@ -119,8 +214,8 @@ footer {
   padding: 20px;
 }
 footer h3 {
-  margin: 0px 0px 15px 0px;
-  font-family: Shrikhand, cursive;
+  margin: 0 0 15px 0;
+  font-family: "Shrikhand", cursive;
   font-weight: 100;
   font-size: 14px;
 }
@@ -134,39 +229,196 @@ footer li a {
 footer li a i {
   margin-right: 10px;
 }
-
-.fa-solid {
-  color: #7E7E7E;
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 50px;
+  }
+  footer h3 {
+    width: 10%;
+    margin: 0px 20px 0px 40px;
+  }
+  footer ul {
+    display: flex;
+  }
+  footer li {
+    margin: 0px 0px 0px 20px;
+  }
+  footer i {
+    margin-right: 0px;
+  }
 }
 
-.fa-store {
-  color: #9356DC;
+/************************ PAGE 2 **************************/
+nav {
+  height: 60px;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+nav a .fa-solid {
+  color: black;
+  padding-left: 10px;
+}
+nav a img {
+  width: 200px;
+  margin: auto;
+  padding-right: 30px;
+}
+
+main img {
+  width: 100%;
+  max-height: 300px;
+}
+
+article header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 450px;
+  margin: auto;
+}
+article header h1 {
+  font-family: "Shrikhand", cursive;
+}
+@media screen and (min-width: 768px) {
+  article header {
+    justify-content: center;
+  }
+  article header h1 {
+    margin-right: 30px;
+  }
+}
+article header figure {
+  width: 16px;
+  height: 16px;
+}
+article header figure img {
+  width: 16px;
+}
+
+article > section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: auto;
+}
+article > section:first-of-type {
+  animation: menu 1s;
+}
+article > section:nth-of-type(2) {
+  animation: menu 2s;
+}
+article > section:last-of-type {
+  animation: menu 3s;
+}
+article > section ul {
+  margin: auto;
+  max-width: 700px;
+  width: 100%;
+}
+article > section li {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: #dfdfdf 0px 5px 15px 0px;
+  margin-top: 3px;
+}
+article > section li b {
+  display: flex;
+  transition: all 0.5s;
+  align-items: end;
+}
+article > section li i {
+  transition: all 0.5s;
+}
+article > section li:hover i, article > section li:focus i {
+  transition: 0.5s;
+  right: 0;
+}
+article > section li:hover b, article > section li:focus b {
+  margin-right: 60px;
+  transition: 0.5s;
+}
+article > section li section {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+article > section li section h3 {
+  font-size: 14px;
+  margin: 0px 0px 7px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+article > section li section p {
+  font-size: 12px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+article > section h2 {
+  font-size: 20px;
+  font-weight: 100;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding-bottom: 3px;
+  margin-left: 10px;
+}
+
+.fa-location-dot {
+  color: #7E7E7E;
 }
 
 .functioning {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px 0px 40px 0px;
+  align-items: stre;
+  margin: 10px 0px 0px 0px;
+  background-color: white;
+  padding: 0px 20px;
 }
-.functioning h2 {
-  margin: 30px 20px 30px -50px;
+.functioning .aligntext {
+  width: 100%;
+}
+.functioning .aligntext h2 {
+  font-size: 20px;
+  margin: 40px 0px 15px 0px;
 }
 .functioning ul {
+  margin: 0px 20px 30px 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.functioning ul li {
+.functioning li {
   width: 100%;
-  max-width: 200px;
   margin-bottom: 20px;
-  padding: 20px 70px 20px 0px;
+  padding: 25px 30px 25px 0px;
   background-color: #F6F6F6;
   border-radius: 15px;
   box-shadow: #dfdfdf 0px 5px 15px 0px;
   font-size: 13px;
+  white-space: nowrap;
 }
-.functioning ul li span {
+.functioning span {
   margin-right: 10px;
   background-color: #9356DC;
   color: white;
@@ -175,15 +427,76 @@ footer li a i {
   padding: 3px 7px 3px 7px;
   margin-left: -8px;
 }
-.functioning ul li i {
+.functioning i {
   margin-right: 10px;
   align-items: center;
+  color: #7E7E7E;
+}
+.functioning li:hover i,
+.functioning li:focus i {
+  color: #9356DC;
+}
+@media screen and (min-width: 768px) {
+  .functioning {
+    padding: 0px 0px 20px 40px;
+  }
+  .functioning ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+  }
+  .functioning li {
+    margin-right: 30px;
+  }
+  .functioning span {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .functioning li {
+    padding: 25px 30px 25px 0px;
+    max-width: 280px;
+    font-size: 16px;
+  }
+  .functioning .aligntext {
+    max-width: 1000px;
+  }
+  .functioning .aligntext h2 {
+    width: 100%;
+    text-align: start;
+    font-size: 20px;
+  }
 }
 
-.restaurants {
+.menu-list {
+  position: relative;
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0 0;
+  margin: auto;
+  margin-top: -40px;
+  max-width: 1000px;
+  padding-bottom: 40px;
+}
+.menu-list button {
+  background: linear-gradient(-20deg, #9356DC, #FF79DA);
+  border-radius: 30px;
+  font-size: 14px;
+  padding: 15px 25px 15px 25px;
+  color: white;
+  width: 250px;
+  box-shadow: #cccccc 0px 5px 10px 0px;
+  border: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin: 40px auto 1% auto;
+  transition: 1s;
+}
+.menu-list button:hover, .menu-list button:focus {
+  transition: 1s;
+  background: linear-gradient(-10deg, #a674e2, #ff9de4);
+  box-shadow: #cccccc 0px 5px 10px 4px;
 }
 
 .fa-handshake-angle {
@@ -192,7 +505,45 @@ footer li a i {
 
 .fa-handshake-angle,
 .fa-utensils {
-  color: #ffffff;
+  color: white;
+}
+
+/********************* PAGE 2 ************************/
+.fa-circle-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60px;
+  color: white;
+  background-color: #99E2D0;
+  height: 60px;
+  margin-left: 10px;
+  border-radius: 0px 10px 10px 0px;
+  top: 0;
+  right: -60px;
+}
+
+.full {
+  height: 24px;
+  position: absolute;
+  padding-top: 14px;
+  top: 23px;
+  opacity: 0;
+}
+.full:hover, .full:focus {
+  opacity: 1;
+  background: -webkit-linear-gradient(-20deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.price b {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  height: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

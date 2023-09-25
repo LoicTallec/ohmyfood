@@ -1,58 +1,126 @@
-.fa-solid {
-    color: #7E7E7E;
-}
 
-.fa-store {
-    color: #9356DC;
+.fa-location-dot {
+    color: $fa-solid-main-color;
 }
 
 .functioning {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0px 40px 0px;
-    
-    h2 {
-        margin: 30px 20px 30px -50px;
+    @include display-secondary;
+    align-items: stre;
+    margin: 10px 0px 0px 0px;
+    background-color: $footer-text-color;
+    padding: 0px 20px;
+
+    .aligntext {
+        width: 100%;
+       
+        h2 {
+            font-size: 20px;
+            margin: 40px 0px 15px 0px;
+        }
     }
 
     ul {
-        display: flex;
-        flex-direction: column;
+        margin: 0px 20px 30px 20px;
+        @include display-secondary;
+    }
+
+    li {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 25px 30px 25px 0px;
+        background-color: $background-main-color;
+        border-radius: 15px;
+        box-shadow: $secondary-shadow-box 0px 5px 15px 0px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    span {
+        margin-right: 10px;
+        background-color: $main-color;
+        color: $footer-text-color;
+        font-size: 10px;
+        border-radius: 30px;
+        padding: 3px 7px 3px 7px;
+        margin-left: -8px;
+    }
+
+    i {
+        margin-right: 10px;
+        align-items: center;
+        color: $fa-solid-main-color;
+    }
+
+    li:hover i,
+    li:focus i {
+        color: $main-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 0px 0px 20px 40px;
+
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: auto;
+           
+        }
+
+        li {
+            margin-right: 30px;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+       
+    }
+
+    @media screen and (min-width: 1024px) {
         
         li {
-            width: 100%;
-            max-width: 200px;
-            margin-bottom: 20px;
-            padding: 20px 70px 20px 0px;
-            background-color: #F6F6F6;
-            border-radius: 15px;
-            box-shadow: #dfdfdf 0px 5px 15px 0px;
-            font-size: 13px;
+            padding: 25px 30px 25px 0px;
+            max-width: 280px;
+            font-size: 16px;
+        }
 
-            span {
-                margin-right: 10px;
-                background-color: #9356DC;
-                color: white;
-                font-size: 10px;
-                border-radius: 30px;
-                padding: 3px 7px 3px 7px;
-                margin-left: -8px;
-            }
+        .aligntext {
+            
+            max-width: 1000px;
 
-            i {
-                margin-right: 10px;
-                align-items: center;
+            h2 {
+                width: 100%;
+                text-align: start;
+                font-size: 20px;
+                
             }
         }
     }
 }
 
-.restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.menu-list {
+    position: relative;
+    background-color: $background-main-color;
+    border-radius: 50px 50px 0 0;
+    margin: auto;
+    margin-top: -40px;
+    max-width: 1000px;
+    padding-bottom: 40px;
+    
+    
+    button {
+        @include btn-design;
+        border: none;
+        display: flex;
+        justify-content: center;
+        margin: 40px auto 1% auto;
+        transition: 1s;
+    }
 }
+
 
 .fa-handshake-angle {
     margin-right: 5px;
@@ -60,5 +128,54 @@
 
 .fa-handshake-angle,
 .fa-utensils {
-    color: #ffffff;
+    color: $footer-text-color;
 }
+
+
+
+/********************* PAGE 2 ************************/
+
+
+.fa-circle-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    color: $footer-text-color;
+    background-color: $tertiary-color;
+    height: 60px;
+    margin-left: 10px;
+    border-radius: 0px 10px 10px 0px;
+    top: 0;
+    right: -60px;
+}
+
+.full {
+    height: 24px;
+    position: absolute;
+    padding-top: 14px;
+    top: 23px;
+    opacity: 0;
+    
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+        background: -webkit-linear-gradient($gradian-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent; 
+    }
+}
+
+.price {
+    b {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        height: 40px;
+    }
+}
+
+

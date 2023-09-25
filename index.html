@@ -2,27 +2,25 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>OhMyFood</title>
-    <link rel="stylesheet" href="style/css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet"> 
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Roboto+Slab&family=Shrikhand&display=swap"> 
+    <link rel="stylesheet" href="style/css/style.css">
 </head>
 
-    <body>
+    <body id="mainpage">
         <header>
             <h1>ohmyfood</h1>
         </header>
 
-        <main>
+        <main id="firstpage">
 
             <form>  
                 <i class="fa-solid fa-location-dot"></i>
@@ -36,25 +34,27 @@
             </header>
 
             <section class="functioning">
-                <h2>Fonctionnement</h2>
+                <div class="aligntext">
+                    <h2>Fonctionnement</h2>
 
-                <ul>
-                    <li>
-                        <span>1</span>
-                        <i class="fa-solid fa-mobile-screen-button fa-lg"></i>
-                        Choisissez un restaurant
-                    </li>
-                    <li>
-                        <span>2</span>
-                        <i class="fa-solid fa-list"></i>
-                        Composez votre menu
-                    </li>
-                    <li>
-                        <span>3</span>
-                        <i class="fa-solid fa-store"></i>
-                        Dégustez au restaurant
-                    </li>
-                </ul>
+                    <ul>
+                        <li>
+                            <span>1</span>
+                            <i class="fa-solid fa-mobile-screen-button fa-lg"></i>
+                            Choisissez un restaurant
+                        </li>
+                        <li>
+                            <span>2</span>
+                            <i class="fa-solid fa-list"></i>
+                            Composez votre menu
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <i class="fa-solid fa-store"></i>
+                            Dégustez au restaurant
+                        </li>
+                    </ul>
+                </div>
             </section>
 
             <article id="restaurants">
@@ -69,7 +69,8 @@
                                 <figcaption>
                                     <h3>la palette du goût</h3>
                                     <p>Ménilmontant</p>
-                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular empty fa-heart fa-xl"></i>
+                                    <i class="fa-solid full fa-heart fa-xl"></i>
                                 </figcaption>
                             </figure>
                         </a>
@@ -83,7 +84,8 @@
                                 <figcaption>
                                     <h3>La note enchantée</h3>
                                     <p>Charonne</p>
-                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular empty fa-heart fa-xl"></i>
+                                    <i class="fa-solid full fa-heart fa-xl"></i>
                                 </figcaption>
                             </figure>
                         </a>
@@ -96,7 +98,8 @@
                                 <figcaption>
                                     <h3>À la française</h3>
                                     <p>Cité Rouge</p>
-                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular empty fa-heart fa-xl"></i>
+                                    <i class="fa-solid full fa-heart fa-xl"></i>
                                 </figcaption>
                             </figure>
                         </a>
@@ -109,7 +112,8 @@
                                 <figcaption>
                                     <h3>Le délice des sens</h3>
                                     <p>Folie-Méricourt</p>
-                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular empty fa-heart fa-xl"></i>
+                                    <i class="fa-solid full fa-heart fa-xl"></i>
                                 </figcaption>
                             </figure>
                         </a>
@@ -120,7 +124,7 @@
         </main>
 
         <footer>
-            <h3>OhMyFood</h3>
+            <h3>ohmyfood</h3>
 
             <ul>
                 <li>

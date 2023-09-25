@@ -4,112 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La Palette du Goût</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>La palette du goût</title>
-    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Roboto+Slab&family=Shrikhand&display=swap"> 
+    <link rel="stylesheet" href="../style/css/style.css">
+    
 </head>
 
     <body>
         
-        <header>
-                <a href="/index.html">
-                    <i class="fa-solid fa-arrow-left fa-xl"></i>
-                    <img src="/images/logo/ohmyfood.png" alt="logo ohmyfood">
-                </a>
-        </header>
+        <nav>
+            <a href="../index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+                <img src="../images/logo/ohmyfood.png" alt="logo ohmyfood">
+            </a>
+        </nav>
 
         <main>  
-            <article>
+            <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+            <article class="menu-list">
                 <header>
-                    <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                     <h1>La palette du goût</h1>
-                    <i class="fa-regular fa-heart"></i>
+                    <figure>
+                        <i class="fa-regular empty fa-heart fa-xl"></i>
+                        <i class="fa-solid full fa-heart fa-xl"></i>
+                    </figure>
                 </header>
 
-                    <section>
-                        <h2>Entrées</h2>
+                <section>
+                    <h2>Entrées</h2>
 
-                        <ul>
-                            <li>
+                    <ul>
+                        <li>
+                            <section>
                                 <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette<b>25€</b></p>
-                                <i class="fa-solid fa-circle-check"></i>
-                            </li>
-                        
+                                <p>Au piment d'Espelette</p>
+                            </section>
+                                <b>25€</b>
+                            <i class="fa-solid fa-circle-check fa-lg"></i>
+                        </li>
+                    
 
-                            <li>
+                        <li>
+                            <section>
                                 <h3>Foie gras de canard mi-cuit</h3>
-                                <p>Et ses copeaux de truffe noire<b>35€</b></p>
-                                <i class="fa-solid fa-circle-check"></i>
-                            </li>
-        
-                            <li>
-                                <h3>Oeuf au plat</h3>
-                                <p>Assaisonné à la truffe sur lit de caviar<b>20€</b></p>
-                                <i class="fa-solid fa-circle-check"></i>
-                            </li>
-                        </ul>
-                    </section>
+                                <p>Et ses copeaux de truffe noire</p>
+                            </section>
+                                <b>35€</b>
+                            <i class="fa-solid fa-circle-check fa-lg"></i>
+                        </li>
     
-                    <section>
-                        <h2>Plats</h2>
+                        <li>
+                            <section>
+                                <h3>Œuf au plat</h3>
+                                <p>Assaisonné à la truffe sur lit de caviar</p>
+                            </section>
+                                <b>20€</b>
+                            <i class="fa-solid fa-circle-check fa-lg"></i>
+                        </li>
+                    </ul>
+                </section>
 
-                        <ul>
-                            <li>
+                <section>
+                    <h2>Plats</h2>
+
+                    <ul>
+                        <li>
+                            <section>
                                 <h3>Filet de bœuf aux herbes</h3>
-                                <p> Accompagné de sa ribambelle de légumes<b>40€</b></p>
-                                <i class="fa-solid fa-circle-check"></i>
-                            </li>
-                        
+                                <p> Accompagné de sa ribambelle de légumes</p>
+                            </section>
+                                <b>40€</b>
+                            <i class="fa-solid fa-circle-check fa-lg"></i>
+                        </li>
+                    
 
-                            <li>
+                        <li>
+                            <section>
                                 <h3>Parmentier de queue de bœuf</h3>
-                                <p>Accompagné de sa purée de panais<b>35€</b></p>
-                                <i class="fa-solid fa-circle-check"></i>
-                            </li>
-        
-                            <li>
-                                <h3>Filet de Turbot</h3>
-                                <p>Aux agrumes<b>44€</b></p>
-                                <i class="fa-solid fa-circle-check"></i>
-                            </li>
-                        </ul>
-                    </section>
+                                <p>Accompagné de sa purée de panais</p>
+                            </section>
+                                <b>35€</b>
+                            <i class="fa-solid fa-circle-check fa-lg"></i>
+                        </li>
     
-                    <section>
-                        <h2>Desserts</h2>
+                        <li>
+                            <section>
+                                <h3>Filet de Turbot</h3>
+                                <p>Aux agrumes</p>
+                            </section>
+                                <b>44€</b>
+                            <i class="fa-solid fa-circle-check fa-lg"></i>
+                        </li>
+                    </ul>
+                </section>
 
-                        <ul>
-                            <li>
+                <section>
+                    <h2>Desserts</h2>
+
+                    <ul>
+                        <li>
+                            <section>
                                 <h3>Paris-Brest</h3>
-                                <p>Revisité<b>18€</b></p>
-                                <i class="fa-solid fa-circle-check"></i>
-                            </li>
-                        
+                                <p>Revisité</p>
+                            </section>
+                                <b>18€</b>
+                            <i class="fa-solid fa-circle-check fa-lg"></i>
+                        </li>
+                    
 
-                            <li>
+                        <li>
+                            <section>
                                 <h3>Macaron au chocolat d'exception</h3>
-                                <p>Et glace à la vanille de Madagascar<b>22€</b></p>
-                                <i class="fa-solid fa-circle-check"></i>
-                            </li>
-        
-                            <li>
+                                <p>Et glace à la vanille de Madagascar</p>
+                            </section>
+                                <b>22€</b>
+                            <i class="fa-solid fa-circle-check fa-lg"></i>
+                        </li>
+    
+                        <li>
+                            <section>
                                 <h3>Mousse au chocolat</h3>
-                                <p>Au piment d'Espelette et à la truffe noire<b>23€</b></p>
-                                <i class="fa-solid fa-circle-check"></i>
-                            </li>
-                        </ul>
-                    </section>
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                            </section>
+                                <b>23€</b>
+                            <i class="fa-solid fa-circle-check fa-lg"></i>
+                        </li>
+                    </ul>
+                </section>
+
+                <button>Commander</button>
+
             </article>
-            
-            <button>Commander</button>
         </main>
 
         <footer>
-            <h3>OhMyFood</h3>
+            <h3>ohmyfood</h3>
 
             <ul>
                 <li>
