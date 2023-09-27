@@ -1,10 +1,20 @@
 /*********************** Page 1 ***********************/
+/****************** LOADER ******************/
+
+[id="mainpage"] {
+    position: relative;
+    z-index: 9999;
+    background: url('../../images/logo/ohmyfood.png') no-repeat center;
+    animation: menu 2s linear forwards;
+    top: 0;
+}
+/*************************************/
+
+/***************** basic rules ***************/
 
 body {
     margin: 0;
-
 }
-
 
 ul {
     margin: 0;
@@ -15,7 +25,6 @@ ul {
 figure {
     margin: 0;
 }
-
 
 img {
     max-width: 100%;
@@ -28,7 +37,6 @@ a {
     color: $main-text-color;
 }
 
-
 p,
 h2,
 h3,
@@ -38,15 +46,21 @@ span {
     font-family: $secondary-font;
 }
 
+[id="firstpage"] {
+    background-color: $background-main-color;
+}
+/****************************************/
+
+/********************** HEADER *************************/
 body > header {
     width: 100%;
     height: 60px;
-    box-shadow: $shadows-box 0px 2px 3px 0px;
+    box-shadow: $shadows-box 0 2px 3px 0;
     position: relative;
 
     h1 {
         text-align: center;
-        margin: 0px;
+        margin: 0;
         padding-top: 15px;
         font-family: $main-font;
         font-size: 25px;
@@ -55,7 +69,7 @@ body > header {
 
 form {
     @include display-main;
-    margin: 0px;
+    margin: 0;
     padding: 15px;
     background-color: $form-color;
     
@@ -68,18 +82,9 @@ form {
         font-weight: 600;
     }
 }
+/**************************************/
 
-/****************** LOADER ******************/
-[id="mainpage"] {
-    position: relative;
-    z-index: 9999;
-    background: url('../../images/logo/ohmyfood.png') no-repeat center;
-    animation: menu 2s linear forwards;
-    top: 0;
-}
-
-/********************************************/
-
+/******************** HEADER BTN *******************/
 main > header {
     text-align: center;
     background-color: $background-main-color;
@@ -87,11 +92,11 @@ main > header {
     height: 260px;
 
     h2 {
-        margin: 20px 20px 20px 20px;
+        margin: 20px;
     }
 
     p {
-        margin: 0px 20px 40px 20px;
+        margin: 0 20px 40px 20px;
         font-weight: 100;
         color: $footer-color;
     }
@@ -109,22 +114,18 @@ main > header {
     }
 }
 
+/***************** SECTION RESTAURANTS *****************/
 [id="restaurants"] {
-    padding: 0px 20px 30px 20px; 
+    padding: 0 20px 30px 20px; 
     background-color: $background-main-color;
-    border-radius: 0%;
     margin: auto;
-    
     
     h2 {
         font-size: 20px;
         margin-top: 50px;
-        
-        text-align: start;
     }
 
     li {
-        
         margin-bottom: 20px;
     }
     
@@ -138,7 +139,6 @@ main > header {
         border-radius: $figure-radius;
 
         img {
-            
             height: 160px;
             border-radius: $figure-radius $figure-radius 0 0;
         }
@@ -155,16 +155,17 @@ main > header {
         figcaption {
             position: relative;
             height: 60px;
-            margin: 10px 20px 0px 20px;
+            margin: 10px 20px 0 20px;
+
             p,
             h3 {
-                margin: 0px 0px 5px;
+                margin: 0 0 5px;
             }
 
             i {
                 position: absolute;
                 right: 10px;
-                top: 35%;
+                top: 21px;
             }
             
             .full {
@@ -174,13 +175,10 @@ main > header {
     }
 
     @media screen and (min-width: 768px) {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         max-width: 1000px;
 
         h2 {
-            margin: 25px 0px 25px 20px;
+            margin: 25px 0 25px 20px;
             font-size: 20px;
         }
 
@@ -207,10 +205,7 @@ main > header {
     }
 }
 
-[id="firstpage"] {
-    background-color: $background-main-color;
-}
-
+/******************* FOOTER *****************/
 footer {
     background-color: $footer-color;
     color: $footer-text-color;
@@ -237,13 +232,13 @@ footer {
     }
 
     @media screen and (min-width: 768px) {
-
         display: flex;
         flex-direction: row-reverse;
         padding-top: 50px;
+
         h3 {
             width: 10%;
-            margin: 0px 20px 0px 40px;
+            margin: 0 0 0 40px;
         }
 
         ul {
@@ -251,17 +246,19 @@ footer {
         }
 
         li {
-            margin: 0px 0px 0px 20px;
+            margin: 0 0 0 20px;
         }
         i {
-            margin-right: 0px;
+            margin-right: 0;
         }
         
     }
 }
+/****************************************************/
 
 /************************ PAGE 2 **************************/
 
+/******************** NAV logo/fav/img ******************/
 nav {
     height: 60px;
     a {
@@ -288,7 +285,9 @@ main img {
     width: 100%;
     max-height: 300px;
 }
+/**************************************************/
 
+/********************** TITLE MENU ******************/
 
 article header {
 
@@ -303,14 +302,6 @@ article header {
         font-family: $main-font;
     }
 
-    @media screen and (min-width: 768px) {
-        justify-content: center;
-
-        h1 {
-            margin-right: 30px;
-        }
-    }
-
     figure {
         width: 16px;
         height: 16px;
@@ -319,9 +310,18 @@ article header {
             width: 16px;
         }
     }
+
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+
+        h1 {
+            margin-right: 30px;
+        }
+    }  
 }
+/************************************************/
 
-
+/********************* MENUS ********************/
 article > section  {
     position: relative;
     display: flex;
@@ -329,7 +329,16 @@ article > section  {
     flex-wrap: wrap;
     max-width: 700px;
     margin: auto;
-    
+
+    h2 {
+        font-size: 20px;
+        font-weight: 100;
+        border-bottom: 3px solid $tertiary-color;
+        width: 40px;
+        padding-bottom: 3px;
+        margin-left: 10px;
+    }
+
     &:first-of-type {
         animation: menu 1s ;
     }
@@ -355,10 +364,8 @@ article > section  {
         margin: 10px;
         background-color: $footer-text-color;
         padding: 10px;
-        height: 40px;
         border-radius: 10px;
-        box-shadow: $secondary-shadow-box 0px 5px 15px 0px;
-        margin-top: 3px;
+        box-shadow: $secondary-shadow-box 0 5px 15px 0;
 
         b {
             display: flex;
@@ -384,8 +391,6 @@ article > section  {
             }
         }
 
-        
-
         section {
             width: 100%;
             overflow: hidden;
@@ -407,21 +412,11 @@ article > section  {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-            }
-            
+            } 
         }    
     }
-
-    h2 {
-        font-size: 20px;
-        font-weight: 100;
-        border-bottom: 3px solid $tertiary-color;
-        width: 40px;
-        padding-bottom: 3px;
-        margin-left: 10px;
-    }
 }
-
+/****************** END *******************/
 
 
 

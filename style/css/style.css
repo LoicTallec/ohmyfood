@@ -10,6 +10,17 @@
   }
 }
 /*********************** Page 1 ***********************/
+/****************** LOADER ******************/
+[id=mainpage] {
+  position: relative;
+  z-index: 9999;
+  background: url("../../images/logo/ohmyfood.png") no-repeat center;
+  animation: menu 2s linear forwards;
+  top: 0;
+}
+
+/*************************************/
+/***************** basic rules ***************/
 body {
   margin: 0;
 }
@@ -44,15 +55,21 @@ span {
   font-family: "Roboto", sans-serif;
 }
 
+[id=firstpage] {
+  background-color: #F6F6F6;
+}
+
+/****************************************/
+/********************** HEADER *************************/
 body > header {
   width: 100%;
   height: 60px;
-  box-shadow: #cccccc 0px 2px 3px 0px;
+  box-shadow: #cccccc 0 2px 3px 0;
   position: relative;
 }
 body > header h1 {
   text-align: center;
-  margin: 0px;
+  margin: 0;
   padding-top: 15px;
   font-family: "Shrikhand", cursive;
   font-size: 25px;
@@ -62,7 +79,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px;
+  margin: 0;
   padding: 15px;
   background-color: #EAEAEA;
 }
@@ -75,16 +92,8 @@ form input {
   font-weight: 600;
 }
 
-/****************** LOADER ******************/
-[id=mainpage] {
-  position: relative;
-  z-index: 9999;
-  background: url("../../images/logo/ohmyfood.png") no-repeat center;
-  animation: menu 2s linear forwards;
-  top: 0;
-}
-
-/********************************************/
+/**************************************/
+/******************** HEADER BTN *******************/
 main > header {
   text-align: center;
   background-color: #F6F6F6;
@@ -92,10 +101,10 @@ main > header {
   height: 260px;
 }
 main > header h2 {
-  margin: 20px 20px 20px 20px;
+  margin: 20px;
 }
 main > header p {
-  margin: 0px 20px 40px 20px;
+  margin: 0 20px 40px 20px;
   font-weight: 100;
   color: #353535;
 }
@@ -122,16 +131,15 @@ main > header a:hover, main > header a:focus {
   }
 }
 
+/***************** SECTION RESTAURANTS *****************/
 [id=restaurants] {
-  padding: 0px 20px 30px 20px;
+  padding: 0 20px 30px 20px;
   background-color: #F6F6F6;
-  border-radius: 0%;
   margin: auto;
 }
 [id=restaurants] h2 {
   font-size: 20px;
   margin-top: 50px;
-  text-align: start;
 }
 [id=restaurants] li {
   margin-bottom: 20px;
@@ -159,29 +167,26 @@ main > header a:hover, main > header a:focus {
 [id=restaurants] figure figcaption {
   position: relative;
   height: 60px;
-  margin: 10px 20px 0px 20px;
+  margin: 10px 20px 0 20px;
 }
 [id=restaurants] figure figcaption p,
 [id=restaurants] figure figcaption h3 {
-  margin: 0px 0px 5px;
+  margin: 0 0 5px;
 }
 [id=restaurants] figure figcaption i {
   position: absolute;
   right: 10px;
-  top: 35%;
+  top: 21px;
 }
 [id=restaurants] figure figcaption .full {
   top: 7px;
 }
 @media screen and (min-width: 768px) {
   [id=restaurants] {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     max-width: 1000px;
   }
   [id=restaurants] h2 {
-    margin: 25px 0px 25px 20px;
+    margin: 25px 0 25px 20px;
     font-size: 20px;
   }
   [id=restaurants] ul {
@@ -204,10 +209,7 @@ main > header a:hover, main > header a:focus {
   }
 }
 
-[id=firstpage] {
-  background-color: #F6F6F6;
-}
-
+/******************* FOOTER *****************/
 footer {
   background-color: #353535;
   color: white;
@@ -237,20 +239,22 @@ footer li a i {
   }
   footer h3 {
     width: 10%;
-    margin: 0px 20px 0px 40px;
+    margin: 0 0 0 40px;
   }
   footer ul {
     display: flex;
   }
   footer li {
-    margin: 0px 0px 0px 20px;
+    margin: 0 0 0 20px;
   }
   footer i {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
+/****************************************************/
 /************************ PAGE 2 **************************/
+/******************** NAV logo/fav/img ******************/
 nav {
   height: 60px;
 }
@@ -276,6 +280,8 @@ main img {
   max-height: 300px;
 }
 
+/**************************************************/
+/********************** TITLE MENU ******************/
 article header {
   display: flex;
   flex-wrap: wrap;
@@ -287,6 +293,13 @@ article header {
 article header h1 {
   font-family: "Shrikhand", cursive;
 }
+article header figure {
+  width: 16px;
+  height: 16px;
+}
+article header figure img {
+  width: 16px;
+}
 @media screen and (min-width: 768px) {
   article header {
     justify-content: center;
@@ -295,14 +308,9 @@ article header h1 {
     margin-right: 30px;
   }
 }
-article header figure {
-  width: 16px;
-  height: 16px;
-}
-article header figure img {
-  width: 16px;
-}
 
+/************************************************/
+/********************* MENUS ********************/
 article > section {
   position: relative;
   display: flex;
@@ -310,6 +318,14 @@ article > section {
   flex-wrap: wrap;
   max-width: 700px;
   margin: auto;
+}
+article > section h2 {
+  font-size: 20px;
+  font-weight: 100;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding-bottom: 3px;
+  margin-left: 10px;
 }
 article > section:first-of-type {
   animation: menu 1s;
@@ -332,10 +348,8 @@ article > section li {
   margin: 10px;
   background-color: white;
   padding: 10px;
-  height: 40px;
   border-radius: 10px;
-  box-shadow: #dfdfdf 0px 5px 15px 0px;
-  margin-top: 3px;
+  box-shadow: #dfdfdf 0 5px 15px 0;
 }
 article > section li b {
   display: flex;
@@ -373,24 +387,14 @@ article > section li section p {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-article > section h2 {
-  font-size: 20px;
-  font-weight: 100;
-  border-bottom: 3px solid #99E2D0;
-  width: 40px;
-  padding-bottom: 3px;
-  margin-left: 10px;
-}
 
-.fa-location-dot {
-  color: #7E7E7E;
-}
-
+/****************** END *******************/
+/****************** PAGE 1 **************************/
+/********** Section fonctioning ***********/
 .functioning {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-items: stre;
   margin: 10px 0px 0px 0px;
   background-color: white;
   padding: 0px 20px;
@@ -400,10 +404,10 @@ article > section h2 {
 }
 .functioning .aligntext h2 {
   font-size: 20px;
-  margin: 40px 0px 15px 0px;
+  margin: 40px 0 15px 0;
 }
 .functioning ul {
-  margin: 0px 20px 30px 20px;
+  margin: 0 20px 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -411,25 +415,23 @@ article > section h2 {
 .functioning li {
   width: 100%;
   margin-bottom: 20px;
-  padding: 25px 30px 25px 0px;
+  padding: 25px 30px 25px 0;
   background-color: #F6F6F6;
   border-radius: 15px;
-  box-shadow: #dfdfdf 0px 5px 15px 0px;
+  box-shadow: #dfdfdf 0 5px 15px 0;
   font-size: 13px;
   white-space: nowrap;
 }
 .functioning span {
-  margin-right: 10px;
+  margin: 0 10px 0 -8px;
   background-color: #9356DC;
   color: white;
   font-size: 10px;
   border-radius: 30px;
   padding: 3px 7px 3px 7px;
-  margin-left: -8px;
 }
 .functioning i {
   margin-right: 10px;
-  align-items: center;
   color: #7E7E7E;
 }
 .functioning li:hover i,
@@ -438,7 +440,7 @@ article > section h2 {
 }
 @media screen and (min-width: 768px) {
   .functioning {
-    padding: 0px 0px 20px 40px;
+    padding: 0 0 20px 40px;
   }
   .functioning ul {
     width: 100%;
@@ -465,9 +467,40 @@ article > section h2 {
   }
   .functioning .aligntext h2 {
     width: 100%;
-    text-align: start;
     font-size: 20px;
   }
+}
+
+/***********************************************/
+/************ FAV Footer/header *****************/
+.fa-handshake-angle,
+.fa-utensils {
+  color: white;
+}
+
+.fa-location-dot {
+  color: #7E7E7E;
+}
+
+.fa-handshake-angle {
+  margin-right: 5px;
+}
+
+/***************************************************/
+/********************* PAGE 2 ************************/
+.full {
+  height: 24px;
+  position: absolute;
+  padding-top: 14px;
+  top: 23px;
+  opacity: 0;
+}
+.full:hover, .full:focus {
+  opacity: 1;
+  background: -webkit-linear-gradient(-20deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .menu-list {
@@ -499,16 +532,6 @@ article > section h2 {
   box-shadow: #cccccc 0px 5px 10px 4px;
 }
 
-.fa-handshake-angle {
-  margin-right: 5px;
-}
-
-.fa-handshake-angle,
-.fa-utensils {
-  color: white;
-}
-
-/********************* PAGE 2 ************************/
 .fa-circle-check {
   display: flex;
   justify-content: center;
@@ -524,26 +547,6 @@ article > section h2 {
   right: -60px;
 }
 
-.full {
-  height: 24px;
-  position: absolute;
-  padding-top: 14px;
-  top: 23px;
-  opacity: 0;
-}
-.full:hover, .full:focus {
-  opacity: 1;
-  background: -webkit-linear-gradient(-20deg, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.price b {
-  display: flex;
-  justify-content: end;
-  align-items: end;
-  height: 40px;
-}
+/******* END ***********/
 
 /*# sourceMappingURL=style.css.map */
