@@ -271,6 +271,7 @@ nav {
         .fa-solid {
             color: $main-text-color;
             padding-left: 10px;
+            
         }
     
         img {
@@ -297,7 +298,7 @@ article header {
     align-items: center;
     max-width: 450px;
     margin: auto;
-
+    
     h1 {
         font-family: $main-font;
     }
@@ -369,12 +370,12 @@ article > section  {
 
         b {
             display: flex;
-            transition: all 0.5s;
+            transition:  0.5s;
             align-items: end;
         }
 
         i {
-            transition: all 0.5s;
+            transition:  0.5s;
         }
         
         &:hover,

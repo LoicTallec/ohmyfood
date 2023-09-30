@@ -105,6 +105,8 @@
 .fa-handshake-angle {
     margin-right: 5px;
 }
+
+
 /***************************************************/
 
 /********************* PAGE 2 ************************/
@@ -115,13 +117,13 @@
     padding-top: 14px;
     top: 23px;
     opacity: 0;
-    
+    background: -webkit-linear-gradient($gradian-color);
+    -webkit-background-clip: text;
+    transition: .5s;
+
     &:hover,
     &:focus {
         opacity: 1;
-        background: -webkit-linear-gradient($gradian-color);
-        background-clip: text;
-        -webkit-background-clip: text;
         color: transparent; 
     }
 }

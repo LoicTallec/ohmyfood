@@ -353,11 +353,11 @@ article > section li {
 }
 article > section li b {
   display: flex;
-  transition: all 0.5s;
+  transition: 0.5s;
   align-items: end;
 }
 article > section li i {
-  transition: all 0.5s;
+  transition: 0.5s;
 }
 article > section li:hover i, article > section li:focus i {
   transition: 0.5s;
@@ -494,12 +494,12 @@ article > section li section p {
   padding-top: 14px;
   top: 23px;
   opacity: 0;
+  background: -webkit-linear-gradient(-20deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  transition: 0.5s;
 }
 .full:hover, .full:focus {
   opacity: 1;
-  background: -webkit-linear-gradient(-20deg, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
 }
 
