@@ -119,7 +119,7 @@
     opacity: 0;
     background: -webkit-linear-gradient($gradian-color);
     -webkit-background-clip: text;
-    transition: .5s;
+    transition: all .5s;
 
     &:hover,
     &:focus {

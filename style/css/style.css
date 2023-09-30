@@ -116,6 +116,7 @@ main > header a {
   color: white;
   width: 250px;
   box-shadow: #cccccc 0px 5px 10px 0px;
+  transition: all 1s;
 }
 main > header a:hover, main > header a:focus {
   transition: 1s;
@@ -496,7 +497,7 @@ article > section li section p {
   opacity: 0;
   background: -webkit-linear-gradient(-20deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 .full:hover, .full:focus {
   opacity: 1;
